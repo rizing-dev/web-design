@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -10,13 +10,6 @@ import {
   Grid,
   Box,
   Container,
-  Paper,
-  Avatar,
-  ListItemIcon,
-  ListItemText,
-  Switch,
-  FormControlLabel,
-  useTheme,
   ThemeProvider,
   createTheme,
   alpha,
@@ -24,8 +17,6 @@ import {
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
@@ -51,7 +42,6 @@ interface ServiceItem {
 }
 
 interface IconContainerProps {
-  themeMode: 'light' | 'dark';
   color: string;
   isHovered: boolean;
 }
@@ -61,16 +51,7 @@ interface ServiceTextProps {
 }
 
 interface StyledAppBarProps {
-  darkMode: boolean;
-}
-
-interface NavButtonProps {
-  active: number;
-  darkMode: boolean;
-}
-
-interface ThemeToggleButtonProps {
-  darkMode: boolean;
+  scrolled: boolean;
 }
 
 // Navigation items
@@ -134,18 +115,21 @@ const serviceItems: ServiceItem[] = [
 ];
 
 // Styled components
-const StyledAppBar = styled(AppBar)<StyledAppBarProps>(({ theme, darkMode }) => ({
-  background: darkMode
-    ? `linear-gradient(90deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`
-    : `linear-gradient(90deg, ${alpha(
-        theme.palette.primary.light,
-        0.2
-      )} 0%, ${alpha(theme.palette.primary.light, 0.4)} 100%)`,
-  boxShadow: theme.shadows[4],
-}));
+const StyledAppBar = styled(AppBar)<StyledAppBarProps>(
+  ({ theme, scrolled }) => ({
+    background: scrolled
+      ? theme.palette.background.paper // Solid background when scrolled
+      : `linear-gradient(90deg, ${alpha(
+          theme.palette.primary.light,
+          0.2
+        )} 0%, ${alpha(theme.palette.primary.light, 0.4)} 100%)`, // Transparent gradient when at top
+    boxShadow: scrolled ? theme.shadows[4] : "none", // Only show shadow when scrolled
+    transition: "background 0.3s ease, box-shadow 0.3s ease", // Smooth transition
+  })
+);
 
-const NavButton = styled(Button)<NavButtonProps>(({ theme, active, darkMode }) => ({
-  color: darkMode ? theme.palette.common.white : theme.palette.primary.main,
+const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
+  color: theme.palette.primary.main,
   fontWeight: 500,
   fontSize: "1rem",
   marginLeft: theme.spacing(2),
@@ -153,9 +137,7 @@ const NavButton = styled(Button)<NavButtonProps>(({ theme, active, darkMode }) =
   position: "relative",
   "&:hover": {
     backgroundColor: "transparent",
-    color: darkMode
-      ? theme.palette.secondary.light
-      : theme.palette.primary.dark,
+    color: theme.palette.primary.dark,
   },
   "&::after": {
     content: '""',
@@ -164,9 +146,7 @@ const NavButton = styled(Button)<NavButtonProps>(({ theme, active, darkMode }) =
     left: 0,
     width: active ? "100%" : "0%",
     height: "2px",
-    backgroundColor: darkMode
-      ? theme.palette.secondary.light
-      : theme.palette.primary.dark,
+    backgroundColor: theme.palette.primary.dark,
     transition: "width 0.3s ease-in-out",
   },
   "&:hover::after": {
@@ -174,45 +154,41 @@ const NavButton = styled(Button)<NavButtonProps>(({ theme, active, darkMode }) =
   },
 }));
 
-// Modified IconContainer to have dark background initially and light on hover
+// Modified IconContainer with light background initially and color on hover
 const IconContainer = styled(Box)<IconContainerProps>(
-  ({ theme, color, isHovered, themeMode }) => ({
+  ({ theme, color, isHovered }) => ({
     width: "48px",
     height: "48px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "10px",
-    // Initially a filled container (dark), on hover it becomes outlined
-    border: isHovered 
-      ? `2px solid ${themeMode === "light" ? color : theme.palette.info.main}`
-      : 'none',
-    // Initially dark background, on hover it becomes light/transparent
-    backgroundColor: isHovered
-      ? "transparent" // Transparent on hover (for outlined effect)
-      : themeMode === "light" ? color : theme.palette.info.main, // Initially filled with color
+    border: isHovered ? `2px solid ${color}` : "none",
+    backgroundColor: isHovered ? "transparent" : color,
     transition: "all 0.3s ease-in-out",
     marginBottom: "12px",
     position: "relative",
     overflow: "hidden",
     "&:hover": {
-      transform: "scale(1.1)", // Scale the icon slightly
+      transform: "scale(1.1)",
     },
-    boxShadow: theme.shadows[4], // Always have shadow for better appearance
+    boxShadow: theme.shadows[4],
     className: "service-icon",
   })
 );
 
 // Service Text styling with color change on hover
-const ServiceText = styled(Typography)<ServiceTextProps>(({ theme, isHovered }) => ({
-  marginTop: "8px",
-  fontSize: "0.875rem",
-  fontWeight: 500,
-  textAlign: "center",
-  color: isHovered ? theme.palette.primary.main : theme.palette.text.primary, // Change text color on hover
-  transition: "color 0.3s ease-in-out",
-  className: "service-text",
-}));
+const ServiceText = styled(Typography)<ServiceTextProps>(
+  ({ theme, isHovered }) => ({
+    marginTop: "8px",
+    fontSize: "0.875rem",
+    fontWeight: 500,
+    textAlign: "center",
+    color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
+    transition: "color 0.3s ease-in-out",
+    className: "service-text",
+  })
+);
 
 // ServiceItemBox styled component
 const ServiceItemBox = styled(Box)(({ theme }) => ({
@@ -229,32 +205,41 @@ const ServiceItemBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ThemeToggleButton = styled(Box)<ThemeToggleButtonProps>(({ theme, darkMode }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: theme.spacing(1),
-  backgroundColor: darkMode
-    ? theme.palette.primary.dark
-    : alpha(theme.palette.primary.light, 0.7),
-  color: darkMode ? theme.palette.common.white : theme.palette.primary.main,
-  padding: theme.spacing(0.5, 2),
-  borderRadius: 50,
-  cursor: "pointer",
-  transition: "all 0.3s",
-}));
-
 const CustomHeader = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [activeItem, setActiveItem] = useState<number>(1);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
-  const [hoveredServiceItem, setHoveredServiceItem] = useState<number | null>(null);
+  const [hoveredServiceItem, setHoveredServiceItem] = useState<number | null>(
+    null
+  );
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [mobileMenuAnchor, setMobileMenuAnchor] = useState<HTMLElement | null>(null);
+  const [mobileMenuAnchor, setMobileMenuAnchor] = useState<HTMLElement | null>(
+    null
+  );
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
-  // Create theme based on dark/light mode
+  // Effect to handle scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10; // Adjust threshold as needed
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
+  // Create theme with light mode only
   const theme = createTheme({
     palette: {
-      mode: isDarkMode ? "dark" : "light",
+      mode: "light",
       primary: {
         main: "#1976d2",
         light: "#42a5f5",
@@ -267,10 +252,15 @@ const CustomHeader = () => {
       info: {
         main: "#29b6f6",
       },
+      background: {
+        paper: "#ffffff", // Solid white background when scrolled
+      },
     },
   });
 
-  const handleServiceMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleServiceMenuOpen = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     setAnchorEl(event.currentTarget);
     setIsDropdownOpen(true);
   };
@@ -288,13 +278,9 @@ const CustomHeader = () => {
     setMobileMenuAnchor(null);
   };
 
-  const handleThemeToggle = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <ThemeProvider theme={theme}>
-      <StyledAppBar position="fixed" darkMode={isDarkMode}>
+      <StyledAppBar position="fixed" scrolled={scrolled}>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
             {/* Logo */}
@@ -315,7 +301,7 @@ const CustomHeader = () => {
                 sx={{
                   ml: 2,
                   fontWeight: 700,
-                  color: isDarkMode ? "common.white" : "primary.main",
+                  color: "primary.main",
                 }}
               >
                 Rizing Pay
@@ -335,7 +321,6 @@ const CustomHeader = () => {
                   <Box key={item.id}>
                     <NavButton
                       active={activeItem === item.id ? 1 : 0}
-                      darkMode={isDarkMode}
                       aria-controls="services-menu"
                       aria-haspopup="true"
                       onClick={handleServiceMenuOpen}
@@ -367,11 +352,8 @@ const CustomHeader = () => {
                           mt: 6.4,
                           borderRadius: 2,
                           boxShadow: 8,
-                          // Replace the basic background color with these options:
-                          bgcolor: isDarkMode 
-                            ? 'rgba(30, 40, 50, 0.95)'  // Dark rich blue-gray with slight transparency
-                            : 'rgba(245, 250, 255, 0.97)', // Very light blue-white with slight transparency
-                          backdropFilter: 'blur(8px)', // Optional: adds a subtle blur effect
+                          bgcolor: "rgba(245, 250, 255, 0.97)",
+                          backdropFilter: "blur(8px)",
                         },
                       }}
                       PaperProps={{
@@ -381,12 +363,12 @@ const CustomHeader = () => {
                         },
                       }}
                       anchorOrigin={{
-                        vertical: "top", // Align the menu to the top of the anchor
-                        horizontal: "center", // Center the menu horizontally
+                        vertical: "top",
+                        horizontal: "center",
                       }}
                       transformOrigin={{
-                        vertical: "top", // Align the menu's top edge with the anchor
-                        horizontal: "center", // Center the menu horizontally
+                        vertical: "top",
+                        horizontal: "center",
                       }}
                     >
                       <Typography
@@ -394,41 +376,43 @@ const CustomHeader = () => {
                         sx={{
                           display: "block",
                           textAlign: "center",
-                          // mb: 2,
-                          color: isDarkMode ? "grey.400" : "grey.600",
-                          backgroundColor: isDarkMode ? "#333" : "#f0f0f0", // Background color
-                          padding: "8px 16px", // Padding for better spacing
-                          borderRadius: "8px", // Rounded corners
-                          fontWeight: "bold", // Make the font bold
-                          boxShadow: 3, // Add subtle shadow for contrast
+                          color: "grey.600",
+                          backgroundColor: "#f0f0f0",
+                          padding: "8px 16px",
+                          borderRadius: "8px",
+                          fontWeight: "bold",
+                          boxShadow: 3,
                         }}
                       >
                         Our Services
                       </Typography>
 
                       <Grid container spacing={1} justifyContent="center">
-                        {serviceItems.map((service:any) => (
+                        {serviceItems.map((service: any) => (
                           <Grid item key={service.id}>
                             <ServiceItemBox
-                              onMouseEnter={() => setHoveredServiceItem(service.id)}
+                              onMouseEnter={() =>
+                                setHoveredServiceItem(service.id)
+                              }
                               onMouseLeave={() => setHoveredServiceItem(null)}
                             >
                               <IconContainer
                                 isHovered={hoveredServiceItem === service.id}
-                                themeMode={isDarkMode ? "dark" : "light"}
                                 color={service.color}
                               >
-                                {/* Change icon color based on hover state */}
                                 {React.cloneElement(service.icon, {
                                   sx: {
-                                    color: hoveredServiceItem === service.id 
-                                      ? (isDarkMode ? theme.palette.info.main : service.color) 
-                                      : theme.palette.common.white, // White for better contrast on dark backgrounds
+                                    color:
+                                      hoveredServiceItem === service.id
+                                        ? service.color
+                                        : theme.palette.common.white,
                                     fontSize: "1.5rem",
                                   },
                                 })}
                               </IconContainer>
-                              <ServiceText isHovered={hoveredServiceItem === service.id}>
+                              <ServiceText
+                                isHovered={hoveredServiceItem === service.id}
+                              >
                                 {service.label}
                               </ServiceText>
                             </ServiceItemBox>
@@ -441,7 +425,6 @@ const CustomHeader = () => {
                   <NavButton
                     key={item.id}
                     active={activeItem === item.id ? 1 : 0}
-                    darkMode={isDarkMode}
                     href={item.path}
                     onClick={() => setActiveItem(item.id)}
                   >
@@ -480,48 +463,13 @@ const CustomHeader = () => {
                   key={item.id}
                   onClick={handleMobileMenuClose}
                   sx={{
-                    color: isDarkMode ? "common.white" : "primary.main",
+                    color: "primary.main",
                   }}
                 >
                   <Typography textAlign="center">{item.label}</Typography>
                 </MenuItem>
               ))}
-              <MenuItem>
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={isDarkMode}
-                      onChange={handleThemeToggle}
-                      color="primary"
-                    />
-                  }
-                  label={isDarkMode ? "Light Mode" : "Dark Mode"}
-                />
-              </MenuItem>
             </Menu>
-
-            {/* Theme Toggle Button */}
-            <ThemeToggleButton
-              darkMode={isDarkMode}
-              onClick={handleThemeToggle}
-              sx={{ display: { xs: "none", md: "flex" } }}
-            >
-              {isDarkMode ? (
-                <>
-                  <Brightness7Icon fontSize="small" />
-                  <Typography variant="body2" fontWeight={500}>
-                    Light Mode
-                  </Typography>
-                </>
-              ) : (
-                <>
-                  <Brightness4Icon fontSize="small" />
-                  <Typography variant="body2" fontWeight={500}>
-                    Dark Mode
-                  </Typography>
-                </>
-              )}
-            </ThemeToggleButton>
           </Toolbar>
         </Container>
       </StyledAppBar>
