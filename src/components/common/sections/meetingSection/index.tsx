@@ -17,7 +17,7 @@ const MeetingIllustration = () => {
           >
             Rizing Pay
           </Typography>
-          <Typography variant="h5" fontWeight="bold" sx={{ mt: 1 }}>
+          <Typography variant="h5" fontWeight="bold" sx={{ mt: 1 }} color="secondary">
             Your Ultimate Destination for One-stop Digital Banking Services
             And Fintech Solutions
           </Typography>

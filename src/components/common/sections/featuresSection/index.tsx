@@ -76,6 +76,35 @@ const FeaturesSection = () => {
       description:
         "We revolutionize your payment and bring modern digital banking solutions to rural areas, making financial services accessible.",
     },
+    // New Features added below:
+    {
+      image:
+        "https://finkeda.com/wp-content/uploads/2024/09/Higher-Commission.png",
+      title: "Higher Commission",
+      description:
+        "We offer competitive commissions to our partners, ensuring that your efforts are well rewarded.",
+    },
+    {
+      image:
+        "https://finkeda.com/wp-content/uploads/2024/09/Regular-Product-Training.png",
+      title: "Regular Product Training",
+      description:
+        "Our partners receive regular training to stay up-to-date with the latest features and services we offer.",
+    },
+    {
+      image:
+        "https://finkeda.com/wp-content/uploads/2024/09/Easy-Onboarding-Products.png",
+      title: "Easy Onboarding Products",
+      description:
+        "We make onboarding easy and efficient with our simple and intuitive product setup process.",
+    },
+    {
+      image:
+        "https://finkeda.com/wp-content/uploads/2024/09/Dedicated-Customer-Service-Team.png",
+      title: "Dedicated Customer Service Team",
+      description:
+        "Our dedicated customer service team is always available to assist you, ensuring that your experience is smooth and hassle-free.",
+    },
   ];
 
   return (
@@ -88,7 +117,7 @@ const FeaturesSection = () => {
           color="primary"
           gutterBottom
         >
-          Why Choose Us?
+          Why Rizing Pay ?
         </Typography>
         <Grid container spacing={4} justifyContent="center">
           {features.map((feature, index) => (

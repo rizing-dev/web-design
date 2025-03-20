@@ -8,6 +8,7 @@ import ServiceSectionUtilityBillPayment from "@/components/common/sections/servi
 import ServiceSectionAadhaarBanking from "@/components/common/sections/servicesection/aadhaarBanking";
 import ServiceSectionPanCard from "@/components/common/sections/servicesection/panCardApplication";
 import FeaturesSection from "@/components/common/sections/featuresSection";
+import AssociationsSection from "@/components/common/sections/associatesSection";
 const RootPage = () => {
   return (
     <Box sx={{ py: 3, backgroundColor: "#f5f5f5" }}>
@@ -29,6 +30,9 @@ const RootPage = () => {
         <ServiceSectionUtilityBillPayment />
         <ServiceSectionMicroATM />
         <ServiceSectionPanCard />
+      </Box>
+      <Box marginTop={2}>
+      <AssociationsSection/>
       </Box>
     </Box>
   );
