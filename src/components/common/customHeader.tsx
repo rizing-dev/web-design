@@ -26,6 +26,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import BoltIcon from "@mui/icons-material/Bolt";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import BadgeIcon from "@mui/icons-material/Badge";
+import { useRouter } from "next/router";
 
 // Type definitions
 interface NavItem {
@@ -39,6 +40,7 @@ interface ServiceItem {
   label: string;
   icon: React.ReactNode;
   color: string;
+  path: string;
 }
 
 interface IconContainerProps {
@@ -56,10 +58,10 @@ interface StyledAppBarProps {
 
 // Navigation items
 const navItems: NavItem[] = [
-  { id: 1, path: "#", label: "Home" },
-  { id: 2, path: "#", label: "About" },
+  { id: 1, path: "/", label: "Home" },
+  { id: 2, path: "/about", label: "About" },
   { id: 3, path: "#", label: "Services" },
-  { id: 4, path: "#", label: "Contact" },
+  { id: 4, path: "contact-us", label: "Contact" },
 ];
 
 // Service items with Material-UI icons and colors
@@ -69,48 +71,56 @@ const serviceItems: ServiceItem[] = [
     label: "DMT",
     icon: <AttachMoneyIcon />,
     color: "#2196F3", // Blue
+    path: "/services/dmt",
   },
   {
     id: 2,
     label: "Micro ATM",
     icon: <LocalAtmIcon />,
     color: "#4CAF50", // Green
+    path: "/services/m-atm",
   },
   {
     id: 3,
     label: "AePS",
     icon: <FingerprintIcon />,
     color: "#FF9800", // Orange
+    path: "/services/aeps",
   },
   {
     id: 4,
     label: "Travel Services",
     icon: <FlightIcon />,
     color: "#9C27B0", // Purple
+    path: "/services/travel",
   },
   {
     id: 5,
     label: "Insurance",
     icon: <HealthAndSafetyIcon />,
     color: "#F44336", // Red
+    path: "/services/insurance",
   },
   {
     id: 6,
-    label: "CMS",
+    label: "PG",
     icon: <BusinessCenterIcon />,
     color: "#673AB7", // Deep Purple
+    path: "/services/pg",
   },
   {
     id: 7,
     label: "Utility Bills",
     icon: <BoltIcon />,
     color: "#FFEB3B", // Yellow
+    path: "/services/utility-bills",
   },
   {
     id: 8,
     label: "Credit Cards",
     icon: <CreditCardIcon />,
     color: "#00BCD4", // Cyan
+    path: "/services/credit-card",
   },
 ];
 
@@ -206,6 +216,7 @@ const ServiceItemBox = styled(Box)(({ theme }) => ({
 }));
 
 const CustomHeader = () => {
+  const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [activeItem, setActiveItem] = useState<number>(1);
   const [hoveredServiceItem, setHoveredServiceItem] = useState<number | null>(
@@ -395,6 +406,7 @@ const CustomHeader = () => {
                                 setHoveredServiceItem(service.id)
                               }
                               onMouseLeave={() => setHoveredServiceItem(null)}
+                              onClick={() => router.push(service.path)}
                             >
                               <IconContainer
                                 isHovered={hoveredServiceItem === service.id}

@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Container, Typography, Box } from "@mui/material";
 
-const ImageHeroSection = () => {
+const TopImage = () => {
   const images = [
     "https://finkeda.com/wp-content/uploads/2024/12/Travel-service-website-banner-copy.jpg",
     "https://finkeda.com/wp-content/uploads/2024/12/Insurance-website-banner-copy.jpg",
@@ -57,4 +57,4 @@ const ImageHeroSection = () => {
   );
 };
 
-export default ImageHeroSection;
+export default TopImage;
