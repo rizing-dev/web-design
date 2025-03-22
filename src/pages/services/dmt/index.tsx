@@ -1,9 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-const ServicesDmt = dynamic(
-  () => import("@/components/pages/services/creditCard")
-);
+const ServicesDmt = dynamic(() => import("@/components/pages/services/dmt"));
 
 export default function ServicesDmtPage() {
   return (

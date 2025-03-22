@@ -13,10 +13,14 @@ import {
   ThemeProvider,
   createTheme,
   alpha,
+  Collapse,
+  List,
+  ListItem,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
@@ -25,7 +29,6 @@ import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import BoltIcon from "@mui/icons-material/Bolt";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-import BadgeIcon from "@mui/icons-material/Badge";
 import { useRouter } from "next/router";
 
 // Type definitions
@@ -59,7 +62,7 @@ interface StyledAppBarProps {
 // Navigation items
 const navItems: NavItem[] = [
   { id: 1, path: "/", label: "Home" },
-  { id: 2, path: "/about", label: "About" },
+  { id: 2, path: "/about", label: "About-us" },
   { id: 3, path: "#", label: "Services" },
   { id: 4, path: "contact-us", label: "Contact" },
 ];
@@ -75,7 +78,7 @@ const serviceItems: ServiceItem[] = [
   },
   {
     id: 2,
-    label: "Micro ATM",
+    label: "M ATM",
     icon: <LocalAtmIcon />,
     color: "#4CAF50", // Green
     path: "/services/m-atm",
@@ -88,11 +91,11 @@ const serviceItems: ServiceItem[] = [
     path: "/services/aeps",
   },
   {
-    id: 4,
-    label: "Travel Services",
-    icon: <FlightIcon />,
-    color: "#9C27B0", // Purple
-    path: "/services/travel",
+    id: 8,
+    label: "Pan Card",
+    icon: <CreditCardIcon />,
+    color: "#00BCD4", // Cyan
+    path: "/services/pan-card",
   },
   {
     id: 5,
@@ -115,12 +118,13 @@ const serviceItems: ServiceItem[] = [
     color: "#FFEB3B", // Yellow
     path: "/services/utility-bills",
   },
+  
   {
-    id: 8,
-    label: "Credit Cards",
-    icon: <CreditCardIcon />,
-    color: "#00BCD4", // Cyan
-    path: "/services/credit-card",
+    id: 4,
+    label: "Travel Services",
+    icon: <FlightIcon />,
+    color: "#9C27B0", // Purple
+    path: "/services/travel",
   },
 ];
 
@@ -164,7 +168,7 @@ const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
   },
 }));
 
-// Modified IconContainer with light background initially and color on hover
+// Modified IconContainer that works on mobile too
 const IconContainer = styled(Box)<IconContainerProps>(
   ({ theme, color, isHovered }) => ({
     width: "48px",
@@ -215,6 +219,17 @@ const ServiceItemBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+// Mobile Service Item styled component
+const MobileServiceItem = styled(ListItem)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(1.5),
+  borderBottom: `1px solid ${theme.palette.divider}`,
+  "&:last-child": {
+    borderBottom: "none",
+  },
+}));
+
 const CustomHeader = () => {
   const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -227,6 +242,7 @@ const CustomHeader = () => {
     null
   );
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
 
   // Effect to handle scroll
   useEffect(() => {
@@ -252,19 +268,23 @@ const CustomHeader = () => {
     palette: {
       mode: "light",
       primary: {
-        main: "#1976d2",
-        light: "#42a5f5",
-        dark: "#0d47a1",
+        main: "#1565C0", // Deeper blue for a stronger appearance
+        light: "#42A5F5", // Keeping the light blue shade
+        dark: "#0D47A1", // Strong contrast for dark
       },
       secondary: {
-        main: "#f9ce1d",
-        light: "#ffeb3b",
+        main: "#FFB400", // A richer golden yellow for a premium feel
+        light: "#FFD54F",
+        dark: "#F57F17",
       },
       info: {
-        main: "#29b6f6",
+        main: "#17A2B8", // Balanced cyan for a sleek UI
+        light: "#4FC3F7",
+        dark: "#0277BD",
       },
       background: {
-        paper: "#ffffff", // Solid white background when scrolled
+        default: "#FAFAFA", // Softer white for better readability
+        paper: "#FFFFFF", // Keeping paper solid white
       },
     },
   });
@@ -287,6 +307,16 @@ const CustomHeader = () => {
 
   const handleMobileMenuClose = () => {
     setMobileMenuAnchor(null);
+    setMobileServicesOpen(false);
+  };
+
+  const handleMobileServiceClick = (path: string) => {
+    router.push(path);
+    handleMobileMenuClose();
+  };
+
+  const toggleMobileServices = () => {
+    setMobileServicesOpen(!mobileServicesOpen);
   };
 
   return (
@@ -470,17 +500,78 @@ const CustomHeader = () => {
                 },
               }}
             >
-              {navItems.map((item) => (
-                <MenuItem
-                  key={item.id}
-                  onClick={handleMobileMenuClose}
-                  sx={{
-                    color: "primary.main",
-                  }}
-                >
-                  <Typography textAlign="center">{item.label}</Typography>
-                </MenuItem>
-              ))}
+              {navItems.map((item) =>
+                item.label === "Services" ? (
+                  <Box key={item.id}>
+                    <MenuItem
+                      onClick={toggleMobileServices}
+                      sx={{ color: "primary.main" }}
+                    >
+                      <Typography>{item.label}</Typography>
+                      <Box sx={{ flexGrow: 1 }} />
+                      <KeyboardArrowDownIcon
+                        sx={{
+                          transform: mobileServicesOpen
+                            ? "rotate(180deg)"
+                            : "rotate(0deg)",
+                          transition: "transform 0.3s",
+                        }}
+                      />
+                    </MenuItem>
+                    <Collapse
+                      in={mobileServicesOpen}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <List component="div" disablePadding>
+                        {serviceItems.map((service: any) => (
+                          <MobileServiceItem
+                            key={service.id}
+                            onClick={() =>
+                              handleMobileServiceClick(service.path)
+                            }
+                            sx={{ pl: 4 }}
+                          >
+                            <Box
+                              sx={{
+                                width: 32,
+                                height: 32,
+                                borderRadius: "8px",
+                                backgroundColor: service.color,
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                mr: 2,
+                              }}
+                            >
+                              {React.cloneElement(service.icon, {
+                                sx: { color: "white", fontSize: "1.2rem" },
+                              })}
+                            </Box>
+                            <Typography>{service.label}</Typography>
+                            <Box sx={{ flexGrow: 1 }} />
+                            <KeyboardArrowRightIcon
+                              fontSize="small"
+                              color="action"
+                            />
+                          </MobileServiceItem>
+                        ))}
+                      </List>
+                    </Collapse>
+                  </Box>
+                ) : (
+                  <MenuItem
+                    key={item.id}
+                    onClick={() => {
+                      router.push(item.path);
+                      handleMobileMenuClose();
+                    }}
+                    sx={{ color: "primary.main" }}
+                  >
+                    <Typography textAlign="center">{item.label}</Typography>
+                  </MenuItem>
+                )
+              )}
             </Menu>
           </Toolbar>
         </Container>

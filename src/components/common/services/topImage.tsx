@@ -6,27 +6,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Container, Typography, Box } from "@mui/material";
+interface Props {
+    images:any[];
+}
+const TopImage = ({images}:Props) => {
 
-const TopImage = () => {
-  const images = [
-    "https://finkeda.com/wp-content/uploads/2024/12/Travel-service-website-banner-copy.jpg",
-    "https://finkeda.com/wp-content/uploads/2024/12/Insurance-website-banner-copy.jpg",
-    "https://finkeda.com/wp-content/uploads/2024/12/PAN-CARD-website-banner-copy.jpg",
-  ];
 
   return (
     <Box>
-      <Container maxWidth="lg">
-        <Box textAlign="center" mb={2}>
-          <Typography variant="h5" fontWeight="bold">
-            <span style={{ color: "#ff4081" }}>Rizing Pay</span>-{" "}
-            <span style={{ fontStyle: "italic", fontWeight: "bold" }}>
-              " Empowering Rural India with Seamless Digital Banking and Fintech
-              Solutions "
-            </span>
-          </Typography>
-        </Box>
-
+      <Box>
         {/* Swiper Image Slider */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -52,7 +40,7 @@ const TopImage = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Container>
+      </Box>
     </Box>
   );
 };

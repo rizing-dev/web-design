@@ -9,6 +9,7 @@ import ServiceSectionAadhaarBanking from "@/components/common/sections/servicese
 import ServiceSectionPanCard from "@/components/common/sections/servicesection/panCardApplication";
 import FeaturesSection from "@/components/common/sections/featuresSection";
 import AssociationsSection from "@/components/common/sections/associatesSection";
+import RetailerTestimonials from "@/components/common/sections/customersReview";
 const RootPage = () => {
   return (
     <Box sx={{ py: 3, backgroundColor: "#f5f5f5" }}>
@@ -31,9 +32,13 @@ const RootPage = () => {
         <ServiceSectionMicroATM />
         <ServiceSectionPanCard />
       </Box>
+      <Box mt={2}>
+      <RetailerTestimonials/>
+      </Box>
       <Box marginTop={2}>
       <AssociationsSection/>
       </Box>
+      
     </Box>
   );
 };
