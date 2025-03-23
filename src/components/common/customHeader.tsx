@@ -16,6 +16,7 @@ import {
   Collapse,
   List,
   ListItem,
+  Chip,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -63,8 +64,8 @@ interface StyledAppBarProps {
 const navItems: NavItem[] = [
   { id: 1, path: "/", label: "Home" },
   { id: 2, path: "/about", label: "About-us" },
-  { id: 3, path: "#", label: "Services" },
-  { id: 4, path: "contact-us", label: "Contact" },
+  { id: 3, path: "/services", label: "Services" },
+  { id: 4, path: "/agent", label: "Become an Agent" },
 ];
 
 // Service items with Material-UI icons and colors
@@ -118,7 +119,7 @@ const serviceItems: ServiceItem[] = [
     color: "#FFEB3B", // Yellow
     path: "/services/utility-bills",
   },
-  
+
   {
     id: 4,
     label: "Travel Services",
@@ -232,6 +233,7 @@ const MobileServiceItem = styled(ListItem)(({ theme }) => ({
 
 const CustomHeader = () => {
   const router = useRouter();
+  console.log("🚀 ~ CustomHeader ~ router:", router);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [activeItem, setActiveItem] = useState<number>(1);
   const [hoveredServiceItem, setHoveredServiceItem] = useState<number | null>(
@@ -318,7 +320,24 @@ const CustomHeader = () => {
   const toggleMobileServices = () => {
     setMobileServicesOpen(!mobileServicesOpen);
   };
+  const getActiveClass = (path: string) => {
+    return router.asPath === path ? 1 : 0;
+  };
 
+  useEffect(() => {
+    // Check if we are on a service page and highlight "Services"
+    const currentPath = router.asPath;
+    if (currentPath.startsWith("/services")) {
+      setActiveItem(3); // Set the activeItem to the "Services" button if on a services page
+    } else {
+      // Reset activeItem based on the exact match for the path
+      navItems.forEach((item) => {
+        if (item.path === currentPath) {
+          setActiveItem(item.id);
+        }
+      });
+    }
+  }, [router.asPath]);
   return (
     <ThemeProvider theme={theme}>
       <StyledAppBar position="fixed" scrolled={scrolled}>
@@ -361,9 +380,10 @@ const CustomHeader = () => {
                 item.label === "Services" ? (
                   <Box key={item.id}>
                     <NavButton
-                      active={activeItem === item.id ? 1 : 0}
+                      active={getActiveClass(item.path)}
                       aria-controls="services-menu"
                       aria-haspopup="true"
+                      sx={{ textTransform: "none" }}
                       onClick={handleServiceMenuOpen}
                       onMouseEnter={handleServiceMenuOpen}
                       endIcon={
@@ -373,6 +393,7 @@ const CustomHeader = () => {
                               ? "rotate(180deg)"
                               : "rotate(0deg)",
                             transition: "transform 0.3s",
+                            textTransform: "none",
                           }}
                         />
                       }
@@ -436,7 +457,11 @@ const CustomHeader = () => {
                                 setHoveredServiceItem(service.id)
                               }
                               onMouseLeave={() => setHoveredServiceItem(null)}
-                              onClick={() => router.push(service.path)}
+                              onClick={() => {
+                                // At This Place
+                                router.push(service.path);
+                                setIsDropdownOpen(false);
+                              }}
                             >
                               <IconContainer
                                 isHovered={hoveredServiceItem === service.id}
@@ -466,7 +491,8 @@ const CustomHeader = () => {
                 ) : (
                   <NavButton
                     key={item.id}
-                    active={activeItem === item.id ? 1 : 0}
+                    // active={activeItem === item.id ? 1 : 0}
+                    active={getActiveClass(item.path)}
                     href={item.path}
                     onClick={() => setActiveItem(item.id)}
                   >
@@ -573,10 +599,25 @@ const CustomHeader = () => {
                 )
               )}
             </Menu>
+            <Chip
+              label="Login"
+              style={{
+                backgroundColor: "#4CAF50", // Green background
+                color: "#fff", // White text
+                fontWeight: "bold", // Bold text
+                borderRadius: "25px", // Rounded corners
+                padding: "10px 20px", // Extra padding for a larger chip
+                fontSize: "16px", // Bigger text
+                boxShadow: "0px 4px 8px rgba(0,0,0,0.1)", // Subtle shadow
+                transition: "all 0.3s ease", // Smooth transition on hover
+              }}
+              onClick={() => console.log("Test Lal")}
+            />
           </Toolbar>
         </Container>
       </StyledAppBar>
       {/* Add toolbar placeholder to prevent content from hiding behind AppBar */}
+
       <Toolbar />
     </ThemeProvider>
   );

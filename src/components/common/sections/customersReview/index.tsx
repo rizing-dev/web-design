@@ -185,7 +185,7 @@ const RetailerTestimonials = () => {
       <Container maxWidth="lg">
         <Box sx={{ mb: 8, textAlign: "center" }}>
           <Typography
-            variant="h2"
+            variant="h3"
             component="h1"
             fontWeight="bold"
             sx={{
@@ -199,7 +199,7 @@ const RetailerTestimonials = () => {
             What Our Retailers{" "}
           </Typography>
           <Typography
-            variant="h2"
+            variant="h3"
             component="span"
             fontWeight="bold"
             color="text.primary"

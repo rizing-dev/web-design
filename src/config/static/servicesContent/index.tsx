@@ -5,7 +5,7 @@ import dmtImg from "../../../../public/servicesImg/Domestic-Money-Transfer.png";
 import travelImg from "../../../../public/servicesImg/Travel-Services-copy.jpg";
 import panImg from "../../../../public/servicesImg/PAN-Card.png";
 import insuranceImg from "../../../../public/servicesImg/Insurance-copy.jpg";
-
+import billPaymentImg from "../../../../public/servicesImg/Utility-Payments-1-copy.jpg";
 import {
   AttachMoney,
   People,
@@ -272,7 +272,9 @@ const servicesContent = {
       "Why Become a Rizing Pay Travel Agent? Unlock the Potential with",
   },
   insurance: {
-    images: ['https://finkeda.com/wp-content/uploads/2024/12/insurance-page-banner-copy.jpg'],
+    images: [
+      "https://finkeda.com/wp-content/uploads/2024/12/insurance-page-banner-copy.jpg",
+    ],
     services: [
       {
         title: "Discover Easy Insurance Plans for a Secure Tomorrow",
@@ -306,45 +308,163 @@ const servicesContent = {
     ],
 
     benefitsData: [
-        {
-          icon: <AttachMoney fontSize="large" />,
-          text: "Earn attractive commissions on every insurance policy sold, including term plans, health, and life insurance.",
-        },
-        {
-          icon: <People fontSize="large" />,
-          text: "Empower customers by offering easy access to personalized, cost-efficient insurance coverage for a secure tomorrow.",
-        },
-        {
-          icon: <AccessTime fontSize="large" />,
-          text: "24/7 access to insurance services, making it easier for customers to apply for and update their policies at any time.",
-        },
-        {
-          icon: <LegendToggleIcon fontSize="large" />,
-          text: "Increase customer footfall and expand your customer base by offering essential insurance products such as life, health, and term insurance.",
-        },
-        {
-          icon: <School fontSize="large" />,
-          text: "Receive regular, professional training on insurance products and customer service to ensure efficient service delivery.",
-        },
-        {
-          icon: <RocketLaunch fontSize="large" />,
-          text: "Boost your business growth by offering a wide range of reliable and competitive insurance solutions for your customers.",
-        },
-      ],
-      
+      {
+        icon: <AttachMoney fontSize="large" />,
+        text: "Earn attractive commissions on every insurance policy sold, including term plans, health, and life insurance.",
+      },
+      {
+        icon: <People fontSize="large" />,
+        text: "Empower customers by offering easy access to personalized, cost-efficient insurance coverage for a secure tomorrow.",
+      },
+      {
+        icon: <AccessTime fontSize="large" />,
+        text: "24/7 access to insurance services, making it easier for customers to apply for and update their policies at any time.",
+      },
+      {
+        icon: <LegendToggleIcon fontSize="large" />,
+        text: "Increase customer footfall and expand your customer base by offering essential insurance products such as life, health, and term insurance.",
+      },
+      {
+        icon: <School fontSize="large" />,
+        text: "Receive regular, professional training on insurance products and customer service to ensure efficient service delivery.",
+      },
+      {
+        icon: <RocketLaunch fontSize="large" />,
+        text: "Boost your business growth by offering a wide range of reliable and competitive insurance solutions for your customers.",
+      },
+    ],
+
     benefitsTitle: "",
   },
   pg: {
-    images: [],
-    services: [],
-    benefitsData: [],
-    benefitsTitle: "",
+    images: [
+      "https://finkeda.com/wp-content/uploads/2024/12/insurance-page-banner-copy.jpg",
+    ],
+    services: [
+      {
+        title: "Seamless Payment Solutions for Every Business",
+        subtitle: "Unlock Easy, Secure, and Scalable Payments with Rizing Pay",
+        description: `With Rizing Pay, businesses can accept a wide array of payment methods, including domestic and international credit & debit cards, EMIs (Credit/Debit Cards & Cardless), PayLater, Netbanking from 58 banks, UPI, and 8 mobile wallets. Our robust platform makes it easy to accept payments from anywhere in the world while ensuring a smooth and secure checkout experience for your customers.`,
+        image: travelImg.src, // Replace with appropriate image source
+        reverse: false,
+      },
+      {
+        title: "Global Payment Acceptance, Local Convenience",
+        subtitle: "Integrate Rizing Pay's Payment Gateway with Ease",
+        description: `Rizing Pay makes integrating payment solutions simple with a developer-friendly approach. Whether you're using APIs, plugins, or libraries, our platform supports all major languages and platforms. Accept payments seamlessly from your customers worldwide with the same ease as you would locally.`,
+        image: travelImg.src, // Replace with appropriate image source
+        reverse: true,
+      },
+      {
+        title: "Advanced Analytics for Better Business Decisions",
+        subtitle: "Gain Insight with Rizing Pay’s Powerful Dashboard",
+        description: `Rizing Pay offers a comprehensive, easy-to-use dashboard that gives you access to detailed statistics on payments, settlements, refunds, and more. This data-driven approach allows you to make more informed business decisions, enhance your operational efficiency, and grow your revenue.`,
+        image: travelImg.src, // Replace with appropriate image source
+        reverse: false,
+      },
+      {
+        title: "Secure, Reliable, and Scalable Payment Infrastructure",
+        subtitle: "Trust Rizing Pay’s Robust Security for Peace of Mind",
+        description: `We take security seriously. Rizing Pay is PCI DSS Level 1 compliant and undergoes frequent third-party audits to ensure your data is always safe. With dedicated internal security teams and advanced fraud protection measures, you can trust us to handle your payments securely, leaving you free to focus on growing your business.`,
+        image: travelImg.src, // Replace with appropriate image source
+        reverse: true,
+      },
+    ],
+
+    benefitsData: [
+      {
+        icon: <AttachMoney fontSize="large" />,
+        text: "Earn attractive commissions on every payment processed through Rizing Pay, with competitive transaction fees and incentives for high-volume businesses.",
+      },
+      {
+        icon: <People fontSize="large" />,
+        text: "Empower customers by offering them a wide range of payment options, including credit/debit cards, UPI, mobile wallets, and more, ensuring a seamless checkout experience.",
+      },
+      {
+        icon: <AccessTime fontSize="large" />,
+        text: "24/7 access to the Rizing Pay dashboard, enabling you to track payments, settlements, refunds, and more, ensuring real-time visibility of your financial transactions.",
+      },
+      {
+        icon: <LegendToggleIcon fontSize="large" />,
+        text: "Increase your customer base by offering secure and scalable payment solutions, allowing you to accept payments globally while offering a local feel.",
+      },
+      {
+        icon: <School fontSize="large" />,
+        text: "Access regular, professional training and support to help you effectively use Rizing Pay’s tools, APIs, and integrations for a smooth payment experience.",
+      },
+      {
+        icon: <RocketLaunch fontSize="large" />,
+        text: "Boost your business growth with Rizing Pay’s robust, developer-friendly platform and a range of payment methods that help drive more conversions and revenue.",
+      },
+    ],
+
+    benefitsTitle:
+      "Why Rizing Pay is the Perfect Payment Solution for Your Business – Unlock the Benefits of Seamless Payment Processing with",
   },
   utilityBills: {
-    images: [],
-    services: [],
-    benefitsData: [],
-    benefitsTitle: "",
+    images: [
+      "https://finkeda.com/wp-content/uploads/2024/12/utility-page-banner-copy.jpg",
+    ],
+    services: [
+      {
+        title: "Utility Bill Payments Made Easy",
+        subtitle:
+          "Offer Instant, Secure, and Easy Utility Bill Payment Services with Rizing Pay",
+        description: `Are you looking to start a small business or a one-stop recharge bill payment center to offer your customers in rural areas easy, secure, and instant utility bill payment services? Rizing Pay is your answer. With our utility bill payment services, you can offer customers in small towns and remote areas the ease of paying utility bills without waiting in long queues. Our platform empowers merchants to manage bill payments efficiently while offering outstanding discounts, rewards, and commissions.`,
+        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        reverse: false,
+      },
+      {
+        title: "Benefits of Offering Utility Bill Payments with Rizing Pay",
+        subtitle: "Maximize Earnings and Serve Your Customers Better",
+        description: `With Rizing Pay's BBPS services, merchants can manage diverse customer utility bills with ease while earning impressive commissions. It's a one-stop solution for utility bill payments and recharges, designed to increase footfall, provide exceptional customer support, and maximize ROI. This service is an excellent way to grow your business and bring convenience to small towns and rural areas. Join us today and start offering your customers an easy, secure, and instant way to pay utility bills.`,
+        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        reverse: true,
+      },
+      {
+        title: "Join Rizing Pay as a Utility Bill Payment Merchant",
+        subtitle:
+          "Start Earning Commissions with Rizing Pay's Secure and Instant Services",
+        description: `Becoming a Rizing Pay utility bill payment merchant is simple and rewarding! Offer your customers in rural areas a secure and instant way to pay their utility bills through our platform. By partnering with us, you’ll benefit from competitive commissions, a seamless bill payment system, and unmatched customer support. Start earning today and become an essential service provider in your community.`,
+        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        reverse: false,
+      },
+      {
+        title: "Easy Bill Payments with Rizing Pay",
+        subtitle: "Quick Setup for Utility Bill Payment Services",
+        description: `Getting started with Rizing Pay is fast and easy! Our streamlined onboarding process ensures that you can begin offering utility bill payments to your customers without delay. We provide you with all the tools, training, and support necessary to succeed. Join Rizing Pay today and become a key player in delivering instant, secure, and efficient bill payment services to your community.`,
+        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        reverse: true,
+      },
+    ],
+    benefitsData: [
+      {
+        icon: <AttachMoney fontSize="large" />,
+        text: "Earn attractive commissions on every utility bill payment processed through Rizing Pay, with competitive transaction fees and incentives for high-volume bill payment businesses.",
+      },
+      {
+        icon: <People fontSize="large" />,
+        text: "Empower customers by offering them a wide range of payment options for utility bills, including credit/debit cards, UPI, mobile wallets, and more, ensuring a seamless payment experience.",
+      },
+      {
+        icon: <AccessTime fontSize="large" />,
+        text: "24/7 access to the Rizing Pay dashboard, enabling you to track bill payments, settlements, refunds, and more, ensuring real-time visibility of your transactions and earnings.",
+      },
+      {
+        icon: <LegendToggleIcon fontSize="large" />,
+        text: "Increase your customer base by offering secure and scalable utility bill payment solutions, allowing you to accept payments for various utility services globally while maintaining a local presence.",
+      },
+      {
+        icon: <School fontSize="large" />,
+        text: "Access regular, professional training and support to help you effectively use Rizing Pay’s tools, APIs, and integrations for a smooth and efficient utility bill payment experience.",
+      },
+      {
+        icon: <RocketLaunch fontSize="large" />,
+        text: "Boost your business growth with Rizing Pay’s robust, developer-friendly platform and a range of payment methods that help drive more bill payments and increase revenue.",
+      },
+    ],
+    benefitsTitle:
+      "Why Become a Rizing Pay Utility Bill Payment Merchant? Unlock the Benefits of Seamless and Secure Bill Payment Services with",
   },
   creditCard: {
     images: [],
