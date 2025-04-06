@@ -44,3 +44,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 Company Landing Website
 >>>>>>> 462ff169ecb05722fe3ee4b8cdb7ad06babb0f62
 # rizing-dev-web
+# rizing-web
