@@ -6,12 +6,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Container, Typography, Box } from "@mui/material";
+import image1 from '../../../../../public/newImages/1.png';
+import image2 from '../../../../../public/newImages/2.png';
+import image3 from '../../../../../public/newImages/3.png';
+
 
 const ImageHeroSection = () => {
   const images = [
-    "https://finkeda.com/wp-content/uploads/2024/12/Travel-service-website-banner-copy.jpg",
-    "https://finkeda.com/wp-content/uploads/2024/12/Insurance-website-banner-copy.jpg",
-    "https://finkeda.com/wp-content/uploads/2024/12/PAN-CARD-website-banner-copy.jpg",
+    image1.src,
+    image2.src,
+    image3.src,
   ];
 
   return (
