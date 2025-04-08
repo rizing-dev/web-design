@@ -1,15 +1,18 @@
 "use client";
 import React from "react";
 
+import aboutusImage from "../../../../public/newImages/home/About Us.png";
+import Image from "next/image";
+
 const TopImage = () => {
   return (
     <div>
       <img
-        src="https://finkeda.com/wp-content/uploads/2025/01/About-us-page-banner-copy.jpg"
+        src={aboutusImage.src}
         alt="slide-0"
         style={{
           width: "100%", // Ensure full width within the container
-          height: "auto", // Adjust height to your preference
+          height: "450px", // Adjust height to your preference
           objectFit: "cover", // Ensures the image covers the full space
           borderRadius: "10px",
         }}

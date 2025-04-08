@@ -15,6 +15,35 @@ import {
   Storefront,
 } from "@mui/icons-material";
 import LegendToggleIcon from "@mui/icons-material/LegendToggle";
+import dmtImage1 from "../../../../public/newImages/dm1.jpg";
+import dmtImage2 from "../../../../public/newImages/dmt2.jpg";
+import bbpsImage1 from "../../../../public/newImages/bbps1.jpg";
+import bbpsImage2 from "../../../../public/newImages/bbps2.jpg";
+import bbpsImage3 from "../../../../public/newImages/bbps3.jpg";
+import cmsImage1 from "../../../../public/newImages/cms1.jpg";
+import cmsImage2 from "../../../../public/newImages/cms2.jpg";
+import panCardImage1 from "../../../../public/newImages/pancard1.jpg";
+import panCardImage2 from "../../../../public/newImages/pancard2.jpg";
+import insuranceImage1 from "../../../../public/newImages/insurance1.jpg";
+import insuranceImage2 from "../../../../public/newImages/insurance2.png";
+import matmBanner1 from "../../../../public/newImages/matm1.jpg";
+import matmBanner2 from "../../../../public/newImages/matm1.jpg";
+import travelBanner1 from "../../../../public/newImages/travel1.jpg";
+import travelBanner2 from "../../../../public/newImages/travel2.png";
+
+import matm1 from "../../../../public/newImages/home/matm1.png";
+// Main Menu
+import aeps1 from "../../../../public/newImages/home/aeps1.png";
+import aeps2 from "../../../../public/newImages/home/aeps2.png";
+
+import panCard1 from "../../../../public/newImages/home/pan1.png";
+
+import billPayment1 from "../../../../public/newImages/home/bbps1.png";
+import billPayment2 from "../../../../public/newImages/home/bbps2.png";
+import billPayment3 from "../../../../public/newImages/home/bbps3.png";
+import billPayment5 from "../../../../public/newImages/home/bbps5.png";
+
+import travel1 from "../../../../public/newImages/home/travel1.png";
 
 const servicesContent = {
   aeps: {
@@ -29,14 +58,14 @@ const servicesContent = {
         subtitle:
           "Offer One-Stop Aadhaar Banking Solutions in Rural Areas with Rizing Pay",
         description: `Are you a retailer looking to expand your business by offering Aadhaar banking services in small towns? With Rizing Pay, you can provide seamless Aadhaar-enabled banking solutions, including cash withdrawals, AePS services, mini statements, and balance inquiries—all in one place.`,
-        image: aadhaarBankingImg.src,
+        image: aeps1.src,
         reverse: false,
       },
       {
         title: "Balance Enquiry",
         subtitle: "Offer Balance Inquiry Services Through Rizing Pay",
         description: `In small towns, people often struggle with limited access to financial services. With Rizing Pay, you can provide balance inquiry services to customers through Aadhaar card authentication, enabling them to check their account balance easily and securely.`,
-        image: balanceInquiryImg.src,
+        image: aeps2.src,
         reverse: true,
       },
       {
@@ -78,7 +107,9 @@ const servicesContent = {
   },
   dmt: {
     images: [
-      "https://finkeda.com/wp-content/uploads/2025/01/DMT-page-banner-copy.jpg",
+      // "https://finkeda.com/wp-content/uploads/2025/01/DMT-page-banner-copy.jpg",
+      dmtImage1.src,
+      dmtImage2.src,
     ],
     services: [
       {
@@ -86,7 +117,7 @@ const servicesContent = {
         subtitle:
           "Transfer Funds Instantly to Any Bank Across India with Rizing Pay’s Domestic Money Transfer Service",
         description: `Domestic money transfer is a cash-to-bank-account remittance service that allows you to help customers transfer money from rural locations to any bank account across India. With Rizing Pay, you can offer fast, secure, and reliable fund transfers through NEFT/IMPS. Whether it's a nationalised or private bank, customers can remit funds instantly to their loved ones or businesses in any IMPS/NEFT-supported bank across India. This service is available 24/7, even during non-banking hours and holidays.`,
-        image: dmtImg.src,
+        image: dmtImage1.src,
         reverse: true,
       },
 
@@ -95,7 +126,7 @@ const servicesContent = {
         subtitle:
           "Track Domestic Money Transfers with Rizing Pay’s Real-Time Updates",
         description: `With Rizing Pay, customers can easily track their domestic money transfers through real-time updates. Whether sending money for personal needs or business purposes, the entire process is secure, transparent, and hassle-free. Customers can see exactly when their funds will be credited to the receiver’s account, ensuring peace of mind with every transaction.`,
-        image: dmtImg.src,
+        image: dmtImage2.src,
         reverse: false,
       },
       {
@@ -138,16 +169,14 @@ const servicesContent = {
       "Benefits Of Offering DMT (Domestic Money Transfer Services) Through",
   },
   mAtm: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2025/01/DMT-page-banner-copy.jpg",
-    ],
+    images: [matmBanner1.src, matmBanner2.src],
     services: [
       {
         title: "Discover Lucrative Business Opportunities",
         subtitle:
           "Unlock Your Path to Financial Success with Our Products and Services",
         description: `Step into a world of lucrative opportunities as an M-Atm agent. By partnering with us, you’ll gain access to a wide range of essential banking services such as cash withdrawals, balance inquiries, mini-statements, and much more. With the backing of a proven business model and attractive income potential, you can empower your business while contributing to financial inclusion in underserved areas.`,
-        image: dmtImg.src,
+        image: matm1.src,
         reverse: false,
       },
       {
@@ -204,16 +233,14 @@ const servicesContent = {
       "Benefits of Offering Micro ATM (M-ATM) Services Through Our Platform",
   },
   travel: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/travel-page-banner-copy.jpg",
-    ],
+    images: [travelBanner1.src, travelBanner2.src],
     services: [
       {
         title: "Discover Profitable Travel Booking Opportunities",
         subtitle:
           "Unlock Your Path to Earnings with Rizing Pay's Travel Services",
         description: `Step into a world of profitable opportunities as a Rizing Pay travel agent. By partnering with us, you’ll gain access to a comprehensive platform that allows you to book both bus and flight tickets from multiple merchants and platforms. Maximize your earnings with competitive commissions while providing your customers with the best travel deals and a seamless booking experience. Empower your business and become a key player in the thriving travel industry.`,
-        image: travelImg.src, // Replace with appropriate image source
+        image: travel1.src, // Replace with appropriate image source
         reverse: false,
       },
       {
@@ -272,9 +299,7 @@ const servicesContent = {
       "Why Become a Rizing Pay Travel Agent? Unlock the Potential with",
   },
   insurance: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/insurance-page-banner-copy.jpg",
-    ],
+    images: [insuranceImage1.src, insuranceImage2.src],
     services: [
       {
         title: "Discover Easy Insurance Plans for a Secure Tomorrow",
@@ -402,23 +427,21 @@ const servicesContent = {
       "Why Rizing Pay is the Perfect Payment Solution for Your Business – Unlock the Benefits of Seamless Payment Processing with",
   },
   utilityBills: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/utility-page-banner-copy.jpg",
-    ],
+    images: [bbpsImage1.src, bbpsImage2.src, bbpsImage3.src],
     services: [
       {
         title: "Utility Bill Payments Made Easy",
         subtitle:
           "Offer Instant, Secure, and Easy Utility Bill Payment Services with Rizing Pay",
         description: `Are you looking to start a small business or a one-stop recharge bill payment center to offer your customers in rural areas easy, secure, and instant utility bill payment services? Rizing Pay is your answer. With our utility bill payment services, you can offer customers in small towns and remote areas the ease of paying utility bills without waiting in long queues. Our platform empowers merchants to manage bill payments efficiently while offering outstanding discounts, rewards, and commissions.`,
-        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        image: billPayment1.src, // Replace with appropriate image source for utility payments
         reverse: false,
       },
       {
         title: "Benefits of Offering Utility Bill Payments with Rizing Pay",
         subtitle: "Maximize Earnings and Serve Your Customers Better",
         description: `With Rizing Pay's BBPS services, merchants can manage diverse customer utility bills with ease while earning impressive commissions. It's a one-stop solution for utility bill payments and recharges, designed to increase footfall, provide exceptional customer support, and maximize ROI. This service is an excellent way to grow your business and bring convenience to small towns and rural areas. Join us today and start offering your customers an easy, secure, and instant way to pay utility bills.`,
-        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        image: billPayment2.src, // Replace with appropriate image source for utility payments
         reverse: true,
       },
       {
@@ -426,14 +449,14 @@ const servicesContent = {
         subtitle:
           "Start Earning Commissions with Rizing Pay's Secure and Instant Services",
         description: `Becoming a Rizing Pay utility bill payment merchant is simple and rewarding! Offer your customers in rural areas a secure and instant way to pay their utility bills through our platform. By partnering with us, you’ll benefit from competitive commissions, a seamless bill payment system, and unmatched customer support. Start earning today and become an essential service provider in your community.`,
-        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        image: billPayment3.src, // Replace with appropriate image source for utility payments
         reverse: false,
       },
       {
         title: "Easy Bill Payments with Rizing Pay",
         subtitle: "Quick Setup for Utility Bill Payment Services",
         description: `Getting started with Rizing Pay is fast and easy! Our streamlined onboarding process ensures that you can begin offering utility bill payments to your customers without delay. We provide you with all the tools, training, and support necessary to succeed. Join Rizing Pay today and become a key player in delivering instant, secure, and efficient bill payment services to your community.`,
-        image: billPaymentImg.src, // Replace with appropriate image source for utility payments
+        image: billPayment5.src, // Replace with appropriate image source for utility payments
         reverse: true,
       },
     ],
@@ -473,15 +496,13 @@ const servicesContent = {
     benefitsTitle: "",
   },
   panCard: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/pan-card-page-banner-copy.jpg",
-    ],
+    images: [panCardImage2.src, panCardImage1.src],
     services: [
       {
         title: "Discover Easy PAN Card Application and Update Services",
         subtitle: "Unlock Convenient PAN Card Solutions with Rizing Pay",
         description: `Step into a world of hassle-free PAN card services as a Rizing Pay PAN Card agent. By partnering with us, you’ll gain access to a user-friendly platform where customers can easily apply for new PAN cards or update their details. Maximize your earnings with competitive commissions while providing a streamlined, efficient service to your customers. Empower your business and become an essential resource for those in need of PAN card services.`,
-        image: panImg.src, // Replace with appropriate image source
+        image: panCard1.src, // Replace with appropriate image source
         reverse: false,
       },
       {

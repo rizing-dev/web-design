@@ -8,15 +8,15 @@ import {
   Box,
   Container,
 } from "@mui/material";
-import microAtmImage from "../../../../../public/services.png";
-import Image from "next/image";
+//  To Do : Change the image path to the correct one
+import microAtmImage from "../../../../../public/newImages/home/matm1.png";
+
 
 const ServiceSectionMicroATM = () => {
   return (
     <Box
       sx={{
-     
-        py: 6, 
+        py: 6,
       }}
     >
       <Container maxWidth={"lg"}>
@@ -26,10 +26,10 @@ const ServiceSectionMicroATM = () => {
             // p: 4,
             // boxShadow: 8,
             // borderRadius: 2,
-             backgroundColor: "#f5f5f5", // White background for the card  backgroundColor: "#f5f5f5" }}
+            backgroundColor: "#f5f5f5", // White background for the card  backgroundColor: "#f5f5f5" }}
           }}
         >
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={2} alignItems="center">
             {/* Left Side - Image */}
             <Grid item xs={12} md={6} display="flex" justifyContent="center">
               <img
@@ -61,8 +61,9 @@ const ServiceSectionMicroATM = () => {
                     fontSize: "1rem", // Slightly larger font for better readability
                   }}
                 >
-                  mATM is a one-stop solution for all your banking needs, whether it's
-                  balance inquiries, mini statement prints, or cash withdrawals.
+                  mATM is a one-stop solution for all your banking needs,
+                  whether it's balance inquiries, mini statement prints, or cash
+                  withdrawals.
                   <strong> RIzing Pay </strong> merchant simplifies your
                   financial transactions while offering convenience near your
                   home.

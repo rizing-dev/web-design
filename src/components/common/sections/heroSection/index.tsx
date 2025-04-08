@@ -6,16 +6,24 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Container, Typography, Box } from "@mui/material";
-import image1 from '../../../../../public/newImages/1.png';
-import image2 from '../../../../../public/newImages/2.png';
-import image3 from '../../../../../public/newImages/3.png';
-
-
+import image1 from "../../../../../public/newImages/bbps1.jpg";
+import image2 from "../../../../../public/newImages/dm1.jpg";
+import image3 from "../../../../../public/newImages/pancard1.jpg";
+import image4 from "../../../../../public/newImages/travel1.jpg";
+import image5 from "../../../../../public/newImages/matm1.jpg";
+import image6 from "../../../../../public/newImages/insurance2.png";
+import image7 from "../../../../../public/newImages/pancard1.jpg";
+import imageGood from "../../../../../public/newImages/home/good.png";
 const ImageHeroSection = () => {
   const images = [
     image1.src,
+    image6.src,
+    // imageGood.src,
     image2.src,
     image3.src,
+    image4.src,
+    image5.src,
+    image7.src,
   ];
 
   return (

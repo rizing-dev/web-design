@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import microAtmImage from "../../../../../public/services.png";
 import Image from "next/image";
-
+import insuranceImage2 from "../../../../../public/newImages/home/bbps2.png";
 const ServiceSectionUtilityBillPayment = () => {
   return (
     <Box
@@ -51,7 +51,7 @@ const ServiceSectionUtilityBillPayment = () => {
                     fontSize: "1rem", // Slightly larger font for better readability
                   }}
                 >
-                  mATM is a one-stop solution for all your banking needs,
+                  Rizing Payis a one-stop solution for all your banking needs,
                   whether it's balance inquiries, mini statement prints, or cash
                   withdrawals.
                   <strong> RIzing Pay </strong> merchant simplifies your
@@ -76,7 +76,10 @@ const ServiceSectionUtilityBillPayment = () => {
             {/* Left Side - Image */}
             <Grid item xs={12} md={6}>
               <img
-                src={'https://finkeda.com/wp-content/uploads/2024/10/Utility-Payments-2.png'}
+                src={
+                  // 'https://finkeda.com/wp-content/uploads/2024/10/Utility-Payments-2.png'
+                  insuranceImage2.src
+                }
                 alt="Fintech illustration"
                 width={600}
                 height={300} // Adjusted height for better proportion

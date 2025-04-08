@@ -8,7 +8,7 @@ import {
   Box,
   Container,
 } from "@mui/material";
-
+import aepsImage1 from "../../../../../public/newImages/home/aeps1.png";
 const ServiceSectionAadhaarBanking = () => {
   return (
     <Box
@@ -31,7 +31,7 @@ const ServiceSectionAadhaarBanking = () => {
             <Grid item xs={12} md={6} display="flex" justifyContent="center">
               <img
                 src={
-                  "https://finkeda.com/wp-content/uploads/2024/09/Aadhaar-Banking.png"
+                  aepsImage1.src
                 }
                 alt="Fintech illustration"
                 width={600}

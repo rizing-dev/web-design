@@ -92,7 +92,7 @@ const serviceItems: ServiceItem[] = [
     path: "/services/aeps",
   },
   {
-    id: 8,
+    id: 4,
     label: "Pan Card",
     icon: <CreditCardIcon />,
     color: "#00BCD4", // Cyan
@@ -102,15 +102,8 @@ const serviceItems: ServiceItem[] = [
     id: 5,
     label: "Insurance",
     icon: <HealthAndSafetyIcon />,
-    color: "#F44336", // Red
+    color: "#FF9800", // Red
     path: "/services/insurance",
-  },
-  {
-    id: 6,
-    label: "PG",
-    icon: <BusinessCenterIcon />,
-    color: "#673AB7", // Deep Purple
-    path: "/services/pg",
   },
   {
     id: 7,
@@ -119,9 +112,8 @@ const serviceItems: ServiceItem[] = [
     color: "#FFEB3B", // Yellow
     path: "/services/utility-bills",
   },
-
   {
-    id: 4,
+    id: 8,
     label: "Travel Services",
     icon: <FlightIcon />,
     color: "#9C27B0", // Purple
