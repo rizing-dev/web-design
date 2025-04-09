@@ -13,12 +13,12 @@ import image4 from "../../../../../public/newImages/travel1.jpg";
 import image5 from "../../../../../public/newImages/matm1.jpg";
 import image6 from "../../../../../public/newImages/insurance2.png";
 import image7 from "../../../../../public/newImages/pancard1.jpg";
-import imageGood from "../../../../../public/newImages/home/good.png";
+
+
 const ImageHeroSection = () => {
   const images = [
     image1.src,
     image6.src,
-    // imageGood.src,
     image2.src,
     image3.src,
     image4.src,
