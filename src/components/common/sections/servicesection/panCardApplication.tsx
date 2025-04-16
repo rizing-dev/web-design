@@ -8,7 +8,7 @@ import {
   Box,
   Container,
 } from "@mui/material";
-import panImage1 from "../../../../../public/newImages/home/pan1.png";
+import panImage1 from "../../../../../public/improved/pan improved.png";
 import Image from "next/image";
 
 const ServiceSectionPanCard = () => {

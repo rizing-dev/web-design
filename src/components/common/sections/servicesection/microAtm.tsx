@@ -8,9 +8,7 @@ import {
   Box,
   Container,
 } from "@mui/material";
-//  To Do : Change the image path to the correct one
-import microAtmImage from "../../../../../public/newImages/home/matm1.png";
-
+import microAtmImage from "../../../../../public/improved/mtam improved.png";
 
 const ServiceSectionMicroATM = () => {
   return (

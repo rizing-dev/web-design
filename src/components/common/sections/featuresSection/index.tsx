@@ -7,7 +7,7 @@ import {
   Box,
   Container,
 } from "@mui/material";
-
+import moneyBag from "../../../../../public/improved/money bag improved.svg";
 interface Props {
   image: string;
   title: string;
@@ -25,6 +25,7 @@ const FeatureCard = ({ image, title, description }: Props) => {
         borderRadius: "16px",
         transition: "transform 0.3s ease-in-out",
         "&:hover": { transform: "scale(1.05)" },
+        height:"350px"
       }}
     >
       <Box display="flex" justifyContent="center" mt={2}>
@@ -79,7 +80,7 @@ const FeaturesSection = () => {
     // New Features added below:
     {
       image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Higher-Commission.png",
+      moneyBag.src,
       title: "Higher Commission",
       description:
         "We offer competitive commissions to our partners, ensuring that your efforts are well rewarded.",

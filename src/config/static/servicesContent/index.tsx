@@ -4,7 +4,6 @@ import miniStatementImg from "../../../../public/servicesImg/Mini-Statement-copy
 import dmtImg from "../../../../public/servicesImg/Domestic-Money-Transfer.png";
 import travelImg from "../../../../public/servicesImg/Travel-Services-copy.jpg";
 import panImg from "../../../../public/servicesImg/PAN-Card.png";
-import insuranceImg from "../../../../public/servicesImg/Insurance-copy.jpg";
 import billPaymentImg from "../../../../public/servicesImg/Utility-Payments-1-copy.jpg";
 import {
   AttachMoney,
@@ -15,28 +14,33 @@ import {
   Storefront,
 } from "@mui/icons-material";
 import LegendToggleIcon from "@mui/icons-material/LegendToggle";
-import dmtImage1 from "../../../../public/newImages/dm1.jpg";
-import dmtImage2 from "../../../../public/newImages/dmt2.jpg";
+import dmtImage1Banner from "../../../../public/newImages/dm1.jpg";
+import dmtImage2Banner from "../../../../public/newImages/dmt2.jpg";
 import bbpsImage1 from "../../../../public/newImages/bbps1.jpg";
 import bbpsImage2 from "../../../../public/newImages/bbps2.jpg";
 import bbpsImage3 from "../../../../public/newImages/bbps3.jpg";
 import cmsImage1 from "../../../../public/newImages/cms1.jpg";
 import cmsImage2 from "../../../../public/newImages/cms2.jpg";
 import panCardImage1 from "../../../../public/newImages/pancard1.jpg";
-import panCardImage2 from "../../../../public/newImages/pancard2.jpg";
-import insuranceImage1 from "../../../../public/newImages/insurance1.jpg";
-import insuranceImage2 from "../../../../public/newImages/insurance2.png";
+import panCardImage2 from "../../../../public/improved/pan cards banner.png";
+import insuranceBannerImage1 from "../../../../public/newImages/insurance1.jpg";
+import insuranceBannerImage2 from "../../../../public/newImages/insurance2.png";
 import matmBanner1 from "../../../../public/newImages/matm1.jpg";
-import matmBanner2 from "../../../../public/newImages/matm1.jpg";
 import travelBanner1 from "../../../../public/newImages/travel1.jpg";
 import travelBanner2 from "../../../../public/newImages/travel2.png";
+import travelBanner3 from "../../../../public/improved/hotel booking.png";
 
-import matm1 from "../../../../public/newImages/home/matm1.png";
+import matm1 from "../../../../public/improved//mtam improved.png";
 // Main Menu
 import aeps1 from "../../../../public/newImages/home/aeps1.png";
 import aeps2 from "../../../../public/newImages/home/aeps2.png";
+import aeps3 from "../../../../public/improved/mini statement - aeps 1 _ matm 3.svg";
+import aeps4 from "../../../../public/improved/Balance Enquiry - matm 2.svg";
 
-import panCard1 from "../../../../public/newImages/home/pan1.png";
+import panCard1 from "../../../../public/improved/pan 1.svg";
+import panCard2 from "../../../../public/improved/pan 2.svg";
+import panCard3 from "../../../../public/improved/pan 3.svg";
+import panCard4 from "../../../../public/improved/pan improved.png";
 
 import billPayment1 from "../../../../public/newImages/home/bbps1.png";
 import billPayment2 from "../../../../public/newImages/home/bbps2.png";
@@ -44,6 +48,17 @@ import billPayment3 from "../../../../public/newImages/home/bbps3.png";
 import billPayment5 from "../../../../public/newImages/home/bbps5.png";
 
 import travel1 from "../../../../public/newImages/home/travel1.png";
+
+import dmtImage1 from "../../../../public/improved/dmt.svg";
+import insuranceImg1 from "../../../../public/improved/life Insurance.svg";
+import insuranceImg2 from "../../../../public/improved/health Insurance.svg";
+import insuranceImg3 from "../../../../public/improved/travel Insurance.svg";
+import insuranceImg4 from "../../../../public/improved/general Insurance.svg";
+
+import travelImage1 from "../../../../public/improved/hotel booking.svg";
+import travelImage2 from "../../../../public/improved/Air Ticket.svg";
+import travelImage3 from "../../../../public/improved/bus ticket.svg";
+import travelImage4 from "../../../../public/improved/travel Insurance.svg";
 
 const servicesContent = {
   aeps: {
@@ -73,7 +88,15 @@ const servicesContent = {
         subtitle:
           "Mini Statement Print Via Aadhaar Card Through Rizing Pay Merchant",
         description: `In small towns, people often struggle with limited access to financial services `,
-        image: miniStatementImg.src,
+        image: aeps3.src,
+        reverse: false,
+      },
+      {
+        title: "AePS",
+        subtitle:
+          "Mini Statement Print Via Aadhaar Card Through Rizing Pay Merchant",
+        description: `In small towns, people often struggle with limited access to financial services `,
+        image: aeps4.src,
         reverse: false,
       },
     ],
@@ -108,8 +131,8 @@ const servicesContent = {
   dmt: {
     images: [
       // "https://finkeda.com/wp-content/uploads/2025/01/DMT-page-banner-copy.jpg",
-      dmtImage1.src,
-      dmtImage2.src,
+      dmtImage1Banner.src,
+      dmtImage2Banner.src,
     ],
     services: [
       {
@@ -126,7 +149,7 @@ const servicesContent = {
         subtitle:
           "Track Domestic Money Transfers with Rizing Pay’s Real-Time Updates",
         description: `With Rizing Pay, customers can easily track their domestic money transfers through real-time updates. Whether sending money for personal needs or business purposes, the entire process is secure, transparent, and hassle-free. Customers can see exactly when their funds will be credited to the receiver’s account, ensuring peace of mind with every transaction.`,
-        image: dmtImage2.src,
+        image: dmtImage2Banner.src,
         reverse: false,
       },
       {
@@ -169,7 +192,7 @@ const servicesContent = {
       "Benefits Of Offering DMT (Domestic Money Transfer Services) Through",
   },
   mAtm: {
-    images: [matmBanner1.src, matmBanner2.src],
+    images: [matmBanner1.src],
     services: [
       {
         title: "Discover Lucrative Business Opportunities",
@@ -233,14 +256,14 @@ const servicesContent = {
       "Benefits of Offering Micro ATM (M-ATM) Services Through Our Platform",
   },
   travel: {
-    images: [travelBanner1.src, travelBanner2.src],
+    images: [, travelBanner3.src, travelBanner1.src, travelBanner2.src],
     services: [
       {
         title: "Discover Profitable Travel Booking Opportunities",
         subtitle:
           "Unlock Your Path to Earnings with Rizing Pay's Travel Services",
         description: `Step into a world of profitable opportunities as a Rizing Pay travel agent. By partnering with us, you’ll gain access to a comprehensive platform that allows you to book both bus and flight tickets from multiple merchants and platforms. Maximize your earnings with competitive commissions while providing your customers with the best travel deals and a seamless booking experience. Empower your business and become a key player in the thriving travel industry.`,
-        image: travel1.src, // Replace with appropriate image source
+        image: travelImage1.src, // Replace with appropriate image source
         reverse: false,
       },
       {
@@ -248,14 +271,14 @@ const servicesContent = {
         subtitle:
           "Start Your Travel Booking Business with a Simple Registration",
         description: `Getting started as a Rizing Pay travel agent is quick and easy! Just fill out a short form with your contact details and desired services, and you’re on your way to joining our network. Whether you're new to the travel industry or looking to expand your existing business, submitting your interest will fast-track your journey toward becoming a successful travel merchant with access to incredible savings and benefits.`,
-        image: travelImg.src, // Replace with appropriate image source
+        image: travelImage2.src, // Replace with appropriate image source
         reverse: true,
       },
       {
         title: "Personalized Consultation",
         subtitle: "Speak with Our Team for Expert Guidance and Support",
         description: `After we receive your interest, our team will personally reach out to you for an in-depth consultation. We'll guide you through the entire process of becoming a travel agent, explaining the benefits, the tools you'll use, and the earning potential you can achieve. You'll also receive insights on how to maximize your commissions while providing top-notch customer service in the travel booking space.`,
-        image: travelImg.src, // Replace with appropriate image source
+        image: travelImage3.src, // Replace with appropriate image source
         reverse: false,
       },
       {
@@ -263,7 +286,7 @@ const servicesContent = {
         subtitle:
           "Become a Rizing Pay Travel Agent with a Smooth Onboarding Process",
         description: `Joining the Rizing Pay family is hassle-free! Our paperless onboarding process ensures you get up and running in no time. After completing a quick registration, we’ll provide you with all the necessary tools, training, and support to get started. With access to the best deals in flight and bus ticket bookings, plus continuous marketing support, you'll be ready to grow your business and serve your customers efficiently.`,
-        image: travelImg.src, // Replace with appropriate image source
+        image: travelImage4.src, // Replace with appropriate image source
         reverse: true,
       },
     ],
@@ -299,27 +322,27 @@ const servicesContent = {
       "Why Become a Rizing Pay Travel Agent? Unlock the Potential with",
   },
   insurance: {
-    images: [insuranceImage1.src, insuranceImage2.src],
+    images: [insuranceBannerImage1.src, insuranceBannerImage2.src],
     services: [
       {
         title: "Discover Easy Insurance Plans for a Secure Tomorrow",
         subtitle: "Unlock Hassle-Free Insurance Solutions with Rizing Pay",
         description: `Step into a world of simple and affordable insurance services as a Rizing Pay Insurance agent. By partnering with us, you’ll gain access to a variety of insurance plans, including term plans, life insurance, health insurance, and more. Maximize your earnings with competitive commissions while providing your customers with personalized, cost-efficient, and comprehensive insurance coverage. Empower your business and become a trusted advisor in the growing insurance industry.`,
-        image: insuranceImg.src, // Replace with appropriate image source
+        image: insuranceImg1.src, // Replace with appropriate image source
         reverse: false,
       },
       {
         title: "Express Your Interest",
         subtitle: "Start Your Insurance Business with a Simple Registration",
         description: `Getting started as a Rizing Pay Insurance agent is quick and easy! Simply fill out a short form with your contact details and the types of insurance services you’d like to offer, and you’re on your way to becoming part of our network. Whether you're new to the insurance industry or looking to expand your existing business, submitting your interest today will fast-track your journey toward offering reliable and personalized insurance solutions.`,
-        image: insuranceImg.src, // Replace with appropriate image source
+        image: insuranceImg2.src, // Replace with appropriate image source
         reverse: true,
       },
       {
         title: "Personalized Consultation",
         subtitle: "Speak with Our Experts for Tailored Insurance Solutions",
         description: `Once we receive your interest, our team will personally reach out to you for an in-depth consultation. We'll guide you through the process of becoming an insurance agent, explaining the benefits of the different types of insurance plans available, including term plans, health insurance, and more. You’ll also gain valuable insights on how to maximize your commissions while delivering top-notch customer service in the insurance space.`,
-        image: insuranceImg.src, // Replace with appropriate image source
+        image: insuranceImg3.src, // Replace with appropriate image source
         reverse: false,
       },
       {
@@ -327,7 +350,7 @@ const servicesContent = {
         subtitle:
           "Become a Rizing Pay Insurance Agent with a Smooth Onboarding Process",
         description: `Joining Rizing Pay is quick and simple! Our paperless onboarding process ensures you can get started right away. After completing a fast registration, we’ll provide you with all the tools, training, and support you need to succeed. With access to a range of insurance options, including term plans and health coverage, plus ongoing marketing support, you’ll be ready to grow your business and provide essential services to your customers.`,
-        image: insuranceImg.src, // Replace with appropriate image source
+        image: insuranceImg4.src, // Replace with appropriate image source
         reverse: true,
       },
     ],
@@ -510,14 +533,14 @@ const servicesContent = {
         subtitle:
           "Start Your PAN Card Application Business with a Simple Registration",
         description: `Becoming a Rizing Pay PAN Card agent is quick and easy! Just fill out a simple registration form with your contact details and desired services, and you’ll be on your way to joining our network. Whether you’re new to providing financial services or looking to expand your business, submitting your interest today will fast-track your journey toward becoming a successful PAN Card merchant with access to exclusive benefits.`,
-        image: panImg.src, // Replace with appropriate image source
+        image: panCard2.src, // Replace with appropriate image source
         reverse: true,
       },
       {
         title: "Personalized Consultation",
         subtitle: "Speak with Our Team for Expert Guidance and Support",
         description: `After we receive your interest, our team will personally reach out to you for an in-depth consultation. We’ll guide you through the entire process of becoming a PAN Card agent, explaining the benefits, the tools you'll use, and the earning potential you can achieve. You’ll also receive insights on how to maximize your commissions while offering excellent customer service in the PAN card application and update space.`,
-        image: panImg.src, // Replace with appropriate image source
+        image: panCard3.src, // Replace with appropriate image source
         reverse: false,
       },
       {
@@ -525,7 +548,7 @@ const servicesContent = {
         subtitle:
           "Become a Rizing Pay PAN Card Agent with a Smooth Onboarding Process",
         description: `Joining the Rizing Pay family is effortless! Our paperless onboarding process ensures that you can get started quickly and easily. After completing a fast registration, we’ll provide you with all the necessary tools, training, and support to succeed. With access to our seamless PAN card application and update platform, plus ongoing marketing support, you’ll be ready to grow your business and serve your customers efficiently.`,
-        image: panImg.src, // Replace with appropriate image source
+        image: panCard4.src, // Replace with appropriate image source
         reverse: true,
       },
     ],
