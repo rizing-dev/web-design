@@ -220,7 +220,7 @@ const servicesContent = {
         title: "Personalized Consultation",
         subtitle: "Speak with Our Team for Expert Guidance and Clarity",
         description: `Once we receive your interest, our team will personally reach out for an initial discussion. We’ll provide in-depth answers to your questions and walk you through the process, from understanding the role and responsibilities to the exciting benefits you'll receive. Plus, we’ll discuss the earning potential and the support you’ll get to grow your business successfully.`,
-        image: matm3.src,
+        image: matm4.src,
         reverse: false,
       },
       {
@@ -228,7 +228,7 @@ const servicesContent = {
         subtitle:
           "Become an M-ATM Agent with Effortless and Efficient Onboarding",
         description: `Becoming an M-ATM agent is quick, easy, and entirely paperless. Once you complete the Aadhaar Enabled Payment System (AePS) registration, our team will ensure you have all the necessary documentation, training, and business tools to thrive. With marketing support, continuous business development, and hands-on guidance, you’ll feel confident launching your business and making an impact in your community.`,
-        image: matm2.src,
+        image: matm3.src,
         reverse: true,
       },
     ],
