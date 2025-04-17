@@ -50,6 +50,8 @@ import billPayment5 from "../../../../public/newImages/home/bbps5.png";
 import travel1 from "../../../../public/newImages/home/travel1.png";
 
 import dmtImage1 from "../../../../public/improved/dmt.svg";
+import dmtImage2 from "../../../../public/newImages/new-banners/dmt 2 (1).svg";
+import dmtImage3 from "../../../../public/newImages/new-banners/dmt 3.svg";
 import insuranceImg1 from "../../../../public/improved/life Insurance.svg";
 import insuranceImg2 from "../../../../public/improved/health Insurance.svg";
 import insuranceImg3 from "../../../../public/improved/travel Insurance.svg";
@@ -60,13 +62,18 @@ import travelImage2 from "../../../../public/improved/Air Ticket.svg";
 import travelImage3 from "../../../../public/improved/bus ticket.svg";
 import travelImage4 from "../../../../public/improved/travel Insurance.svg";
 
+import aepsBanner1 from "../../../../public/newImages/new-banners/aeps 1.png";
+import aepsBanner2 from "../../../../public/newImages/new-banners/aeps 2.png";
+import aepsBanner3 from "../../../../public/newImages/new-banners/aeps 3.png";
+
+import matm2 from "../../../../public/newImages/new-banners/matm 1.svg";
+import matm3 from "../../../../public/newImages/new-banners/matm 2.svg";
+import matm4 from "../../../../public/newImages/new-banners/matm 3.svg";
+import matm5 from "../../../../public/newImages/new-banners/Cash Withdrawal- matm 1.svg";
+
 const servicesContent = {
   aeps: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/adhar-cash-withdrawal-copy.jpg",
-      "https://finkeda.com/wp-content/uploads/2024/12/adhar-balannce-enquiry-copy.jpg",
-      "https://finkeda.com/wp-content/uploads/2024/12/aadhar-banking-page-banner-copy.jpg",
-    ], // Images Array For Top Slider
+    images: [aepsBanner1.src, aepsBanner2.src, aepsBanner3.src], // Images Array For Top Slider
     services: [
       {
         title: "Aadhaar Banking",
@@ -149,7 +156,7 @@ const servicesContent = {
         subtitle:
           "Track Domestic Money Transfers with Rizing Pay’s Real-Time Updates",
         description: `With Rizing Pay, customers can easily track their domestic money transfers through real-time updates. Whether sending money for personal needs or business purposes, the entire process is secure, transparent, and hassle-free. Customers can see exactly when their funds will be credited to the receiver’s account, ensuring peace of mind with every transaction.`,
-        image: dmtImage2Banner.src,
+        image: dmtImage2.src,
         reverse: false,
       },
       {
@@ -157,7 +164,7 @@ const servicesContent = {
         subtitle:
           "Enable Instant Fund Transfers to Any IMPS/NEFT Supported Bank Account Across India Through Rizing Pay",
         description: `With Rizing Pay, you can offer customers the ability to send money instantly to any bank in India, 24/7, including on banking holidays and outside traditional banking hours. This service is perfect for migrants, laborers, and underbanked populations who need to send money quickly and easily. Rizing Pay ensures that recipients will get the funds credited to their bank accounts within seconds, providing convenience and security with every transaction.`,
-        image: dmtImg.src,
+        image: dmtImage3.src,
         reverse: true,
       },
     ],
@@ -206,14 +213,14 @@ const servicesContent = {
         title: "Express Your Interest",
         subtitle: "Kickstart Your Business Journey with a Simple Registration",
         description: `Starting as an M-ATM agent is easy! Simply fill out a quick form with your contact information and desired services, and you’ll be on your way to becoming a part of our thriving network. Submitting your interest today will fast-track your journey toward business ownership and open the door to an exciting new opportunity.`,
-        image: dmtImg.src,
+        image: matm2.src,
         reverse: true,
       },
       {
         title: "Personalized Consultation",
         subtitle: "Speak with Our Team for Expert Guidance and Clarity",
         description: `Once we receive your interest, our team will personally reach out for an initial discussion. We’ll provide in-depth answers to your questions and walk you through the process, from understanding the role and responsibilities to the exciting benefits you'll receive. Plus, we’ll discuss the earning potential and the support you’ll get to grow your business successfully.`,
-        image: dmtImg.src,
+        image: matm3.src,
         reverse: false,
       },
       {
@@ -221,7 +228,7 @@ const servicesContent = {
         subtitle:
           "Become an M-ATM Agent with Effortless and Efficient Onboarding",
         description: `Becoming an M-ATM agent is quick, easy, and entirely paperless. Once you complete the Aadhaar Enabled Payment System (AePS) registration, our team will ensure you have all the necessary documentation, training, and business tools to thrive. With marketing support, continuous business development, and hands-on guidance, you’ll feel confident launching your business and making an impact in your community.`,
-        image: dmtImg.src,
+        image: matm2.src,
         reverse: true,
       },
     ],
