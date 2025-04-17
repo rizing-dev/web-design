@@ -8,6 +8,10 @@ import {
   Container,
 } from "@mui/material";
 import moneyBag from "../../../../../public/improved/money bag improved.svg";
+import customerService from "../../../../../public/improved/Dedicated Customer Service Team.svg";
+import productTraning from "../../../../../public/improved/Regular Product Training.svg";
+import onBoardProduct from "../../../../../public/improved/Easy Onboarding Products.svg";
+
 interface Props {
   image: string;
   title: string;
@@ -25,7 +29,7 @@ const FeatureCard = ({ image, title, description }: Props) => {
         borderRadius: "16px",
         transition: "transform 0.3s ease-in-out",
         "&:hover": { transform: "scale(1.05)" },
-        height:"350px"
+        height: "350px",
       }}
     >
       <Box display="flex" justifyContent="center" mt={2}>
@@ -79,29 +83,25 @@ const FeaturesSection = () => {
     },
     // New Features added below:
     {
-      image:
-      moneyBag.src,
+      image: moneyBag.src,
       title: "Higher Commission",
       description:
         "We offer competitive commissions to our partners, ensuring that your efforts are well rewarded.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Regular-Product-Training.png",
+      image: productTraning.src,
       title: "Regular Product Training",
       description:
         "Our partners receive regular training to stay up-to-date with the latest features and services we offer.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Easy-Onboarding-Products.png",
+      image: onBoardProduct.src,
       title: "Easy Onboarding Products",
       description:
         "We make onboarding easy and efficient with our simple and intuitive product setup process.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Dedicated-Customer-Service-Team.png",
+      image: customerService.src,
       title: "Dedicated Customer Service Team",
       description:
         "Our dedicated customer service team is always available to assist you, ensuring that your experience is smooth and hassle-free.",
