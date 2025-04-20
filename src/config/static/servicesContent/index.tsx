@@ -22,24 +22,24 @@ import bbpsImage3 from "../../../../public/newImages/bbps3.jpg";
 import cmsImage1 from "../../../../public/newImages/cms1.jpg";
 import cmsImage2 from "../../../../public/newImages/cms2.jpg";
 import panCardImage1 from "../../../../public/newImages/pancard1.jpg";
-import panCardImage2 from "../../../../public/improved/pan cards banner.png";
+import panCardImage2 from "../../../../public/new-improved/pan card banner improved.png";
 import insuranceBannerImage1 from "../../../../public/newImages/insurance1.jpg";
 import insuranceBannerImage2 from "../../../../public/newImages/insurance2.png";
 import matmBanner1 from "../../../../public/newImages/matm1.jpg";
 import travelBanner1 from "../../../../public/newImages/travel1.jpg";
 import travelBanner2 from "../../../../public/newImages/travel2.png";
-import travelBanner3 from "../../../../public/improved/hotel booking.png";
+import travelBanner3 from "../../../../public/new-improved/hotel booking banner 2.png";
 
 import matm1 from "../../../../public/improved//mtam improved.png";
 // Main Menu
 import aeps1 from "../../../../public/newImages/home/aeps1.png";
-import aeps2 from "../../../../public/newImages/home/aeps2.png";
-import aeps3 from "../../../../public/improved/mini statement - aeps 1 _ matm 3.svg";
-import aeps4 from "../../../../public/improved/Balance Enquiry - matm 2.svg";
+import aeps3 from "../../../../public/new-improved/mini statement - aeps 1  matm 3 improved.svg";
+import aeps4 from "../../../../public/new-improved/Balance Enquiry - matm 2 improved.svg";
+import aeps2 from "../../../../public/new-improved/Cash_Withdrawal-_matm_1[2] (1).svg";
 
-import panCard1 from "../../../../public/improved/pan 1.svg";
+import panCard1 from "../../../../public/new-improved/pan 1 improved.svg";
 import panCard2 from "../../../../public/improved/pan 2.svg";
-import panCard3 from "../../../../public/improved/pan 3.svg";
+import panCard3 from "../../../../public/new-improved/pan 4 improved (1).svg";
 import panCard4 from "../../../../public/improved/pan improved.png";
 
 import billPayment1 from "../../../../public/newImages/home/bbps1.png";
@@ -64,7 +64,7 @@ import travelImage4 from "../../../../public/improved/travel Insurance.svg";
 
 import aepsBanner1 from "../../../../public/newImages/new-banners/aeps 1.png";
 import aepsBanner2 from "../../../../public/newImages/new-banners/aeps 2.png";
-import aepsBanner3 from "../../../../public/newImages/new-banners/aeps 3.png";
+import aepsBanner3 from "../../../../public/new-improved/mini statement banner improved.png";
 
 import matm2 from "../../../../public/newImages/new-banners/matm 1.svg";
 import matm3 from "../../../../public/newImages/new-banners/matm 2.svg";
@@ -83,13 +83,7 @@ const servicesContent = {
         image: aeps1.src,
         reverse: false,
       },
-      {
-        title: "Balance Enquiry",
-        subtitle: "Offer Balance Inquiry Services Through Rizing Pay",
-        description: `In small towns, people often struggle with limited access to financial services. With Rizing Pay, you can provide balance inquiry services to customers through Aadhaar card authentication, enabling them to check their account balance easily and securely.`,
-        image: aeps2.src,
-        reverse: true,
-      },
+
       {
         title: "Mini Statement",
         subtitle:
@@ -97,6 +91,13 @@ const servicesContent = {
         description: `In small towns, people often struggle with limited access to financial services `,
         image: aeps3.src,
         reverse: false,
+      },
+      {
+        title: "Balance Enquiry",
+        subtitle: "Offer Balance Inquiry Services Through Rizing Pay",
+        description: `In small towns, people often struggle with limited access to financial services. With Rizing Pay, you can provide balance inquiry services to customers through Aadhaar card authentication, enabling them to check their account balance easily and securely.`,
+        image: aeps2.src,
+        reverse: true,
       },
       {
         title: "AePS",
