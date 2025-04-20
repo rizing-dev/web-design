@@ -48,7 +48,6 @@ import billPayment3 from "../../../../public/newImages/home/bbps3.png";
 import billPayment5 from "../../../../public/newImages/home/bbps5.png";
 
 import travel1 from "../../../../public/newImages/home/travel1.png";
-
 import dmtImage1 from "../../../../public/improved/dmt.svg";
 import dmtImage2 from "../../../../public/newImages/new-banners/dmt 2 (1).svg";
 import dmtImage3 from "../../../../public/newImages/new-banners/dmt 3.svg";
@@ -56,20 +55,16 @@ import insuranceImg1 from "../../../../public/improved/life Insurance.svg";
 import insuranceImg2 from "../../../../public/improved/health Insurance.svg";
 import insuranceImg3 from "../../../../public/improved/travel Insurance.svg";
 import insuranceImg4 from "../../../../public/improved/general Insurance.svg";
-
 import travelImage1 from "../../../../public/improved/hotel booking.svg";
 import travelImage2 from "../../../../public/improved/Air Ticket.svg";
 import travelImage3 from "../../../../public/improved/bus ticket.svg";
 import travelImage4 from "../../../../public/improved/travel Insurance.svg";
-
 import aepsBanner1 from "../../../../public/newImages/new-banners/aeps 1.png";
 import aepsBanner2 from "../../../../public/newImages/new-banners/aeps 2.png";
 import aepsBanner3 from "../../../../public/new-improved/mini statement banner improved.png";
-
-import matm2 from "../../../../public/newImages/new-banners/matm 1.svg";
-import matm3 from "../../../../public/newImages/new-banners/matm 2.svg";
-import matm4 from "../../../../public/newImages/new-banners/matm 3.svg";
-import matm5 from "../../../../public/newImages/new-banners/Cash Withdrawal- matm 1.svg";
+import matm2 from "../../../../public/new-improved/matm 1.svg";
+import matm3 from "../../../../public/new-improved/matm 2.svg";
+import matm4 from "../../../../public/new-improved/matm 3.svg";
 
 const servicesContent = {
   aeps: {
