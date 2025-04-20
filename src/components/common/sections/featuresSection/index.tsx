@@ -65,7 +65,7 @@ const FeaturesSection = () => {
         "https://finkeda.com/wp-content/uploads/2024/09/Safety-Comes-First.png",
       title: "Safety Comes First",
       description:
-        "Our goal at FINKEDA is to provide our customers safe, easy and secure digital banking and Fintech solutions.",
+        "Our goal at Rizing Pay is to provide our customers safe, easy and secure digital banking and Fintech solutions.",
     },
     {
       image:

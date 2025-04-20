@@ -52,7 +52,7 @@ const MidSection = () => {
           <Box display="flex" justifyContent="center">
             <img
               src="https://finkeda.com/wp-content/uploads/2024/09/About-Us.png"
-              alt="About Finkeda"
+              alt="About"
               style={{ maxWidth: "100%", height: "auto" }}
             />
           </Box>
