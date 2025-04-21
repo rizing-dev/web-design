@@ -1,10 +1,5 @@
-import aadhaarBankingImg from "../../../../public/servicesImg/Aadhaar-Banking.jpg";
-import balanceInquiryImg from "../../../../public/servicesImg/Balance-Enquiry-copy.jpg";
-import miniStatementImg from "../../../../public/servicesImg/Mini-Statement-copy.jpg";
-import dmtImg from "../../../../public/servicesImg/Domestic-Money-Transfer.png";
+
 import travelImg from "../../../../public/servicesImg/Travel-Services-copy.jpg";
-import panImg from "../../../../public/servicesImg/PAN-Card.png";
-import billPaymentImg from "../../../../public/servicesImg/Utility-Payments-1-copy.jpg";
 import {
   AttachMoney,
   People,
@@ -19,18 +14,16 @@ import dmtImage2Banner from "../../../../public/newImages/dmt2.jpg";
 import bbpsImage1 from "../../../../public/newImages/bbps1.jpg";
 import bbpsImage2 from "../../../../public/newImages/bbps2.jpg";
 import bbpsImage3 from "../../../../public/newImages/bbps3.jpg";
-import cmsImage1 from "../../../../public/newImages/cms1.jpg";
-import cmsImage2 from "../../../../public/newImages/cms2.jpg";
 import panCardImage1 from "../../../../public/newImages/pancard1.jpg";
 import panCardImage2 from "../../../../public/new-improved/pan card banner improved.png";
 import insuranceBannerImage1 from "../../../../public/newImages/insurance1.jpg";
 import insuranceBannerImage2 from "../../../../public/newImages/insurance2.png";
 import matmBanner1 from "../../../../public/newImages/matm1.jpg";
-import travelBanner1 from "../../../../public/newImages/travel1.jpg";
+import travelBanner1 from "../../../../public/new-improved/bus & flight booking banner 2.svg";
 import travelBanner2 from "../../../../public/newImages/travel2.png";
 import travelBanner3 from "../../../../public/new-improved/hotel booking banner 2.png";
-
-import matm1 from "../../../../public/improved//mtam improved.png";
+import travelBanner4 from "../../../../public/new-improved/travel services banner.svg";
+import matm1 from "../../../../public/new-improved/Untitled design.svg";
 // Main Menu
 import aeps1 from "../../../../public/newImages/home/aeps1.png";
 import aeps3 from "../../../../public/new-improved/mini statement - aeps 1  matm 3 improved.svg";
@@ -46,8 +39,6 @@ import billPayment1 from "../../../../public/newImages/home/bbps1.png";
 import billPayment2 from "../../../../public/newImages/home/bbps2.png";
 import billPayment3 from "../../../../public/newImages/home/bbps3.png";
 import billPayment5 from "../../../../public/newImages/home/bbps5.png";
-
-import travel1 from "../../../../public/newImages/home/travel1.png";
 import dmtImage1 from "../../../../public/improved/dmt.svg";
 import dmtImage2 from "../../../../public/newImages/new-banners/dmt 2 (1).svg";
 import dmtImage3 from "../../../../public/newImages/new-banners/dmt 3.svg";
@@ -259,7 +250,13 @@ const servicesContent = {
       "Benefits of Offering Micro ATM (M-ATM) Services Through Our Platform",
   },
   travel: {
-    images: [, travelBanner3.src, travelBanner1.src, travelBanner2.src],
+    images: [
+      ,
+      travelBanner3.src,
+      travelBanner1.src,
+      travelBanner2.src,
+      travelBanner4.src,
+    ],
     services: [
       {
         title: "Discover Profitable Travel Booking Opportunities",
