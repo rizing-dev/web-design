@@ -65,7 +65,8 @@ const navItems: NavItem[] = [
   { id: 1, path: "/", label: "Home" },
   { id: 2, path: "/about", label: "About-us" },
   { id: 3, path: "/services", label: "Services" },
-  { id: 4, path: "/agent", label: "Become an Agent" },
+  { id: 4, path: "/careers", label: "Careers" },
+  { id: 5, path: "/agent", label: "Become an Agent" },
 ];
 
 // Service items with Material-UI icons and colors
@@ -363,6 +364,13 @@ const CustomHeader = () => {
       });
     }
   }, [router.asPath]);
+  const formatLabel = (label: string) => {
+    return label
+      .toLowerCase()
+      .split(/[\s-]/)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -425,7 +433,11 @@ const CustomHeader = () => {
                         />
                       }
                     >
+                      {/* {item.label} */}
+                      <Typography textTransform={'none'}>
                       {item.label}
+                      </Typography>
+                      {/* {formatLabel(item.label)} */}
                     </NavButton>
                     <Menu
                       id="services-menu"
@@ -651,7 +663,9 @@ const CustomHeader = () => {
                     }}
                     sx={{ color: "primary.main" }}
                   >
-                    <Typography textAlign="center">{item.label}</Typography>
+                    <Typography textAlign="center" textTransform={'none'}>
+                      {formatLabel(item.label)}
+                    </Typography>
                   </MenuItem>
                 )
               )}

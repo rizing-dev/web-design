@@ -32,7 +32,7 @@ const ImageHeroSection = () => {
           <Typography variant="h5" fontWeight="bold">
             <span style={{ color: "#ff4081" }}>Rizing Pay</span>-{" "}
             <span style={{ fontStyle: "italic", fontWeight: "bold" }}>
-              " Empowering Rural India with Seamless Digital Banking and Fintech
+              " Empowering Rural BHARAT with Seamless Digital Banking and Fintech
               Solutions "
             </span>
           </Typography>

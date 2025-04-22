@@ -12,9 +12,11 @@ import {
   Paper,
   Divider,
 } from "@mui/material";
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import customer1 from "../../../../../public/customers image/WhatsApp Image 2025-04-22 at 9.16.48 PM.jpeg";
+import customer2 from "../../../../../public/customers image/IMG_20250422_211929.jpg";
+import customer3 from "../../../../../public/customers image/IMG_20250422_211244.jpg";
 interface RetailerTestimonialProps {
   name: string;
   location: string;
@@ -151,27 +153,26 @@ const RetailerTestimonials = () => {
 
   const testimonials = [
     {
-      name: "Babloo Pandit",
-      location: "Assam",
+      name: "Umesh",
+      location: "UP",
       testimonial:
         "मैं 2 -3 पोर्टल उपयोग करता हूँ। पर Rizing Pay की AEPS सर्विस सबसे आरामदायी है। कमीशन भी अच्छा है, और क्या चाहिए।​",
       avatarSrc:
-        "https://in.rapipay.com/wp-content/uploads/2022/12/Babloo-Pandit%E2%80%8B.png",
+      customer1.src,
     },
     {
-      name: "Anis Safibhai Memon",
-      location: "Gujrat",
+      name: "Harpreet Singh",
+      location: "Punjab",
       testimonial:
         "Rizing Pay AEPS is very easy to use. If there is some issue some day, customer care is very quick to resolve it. ​",
-      avatarSrc:
-        "https://in.rapipay.com/wp-content/uploads/2022/12/Anis-Safibhai-Memon%E2%80%8B.png",
+      avatarSrc: customer2.src,
     },
     {
-      name: "Divya",
-      location: "Rajasthan",
+      name: "Chanchal",
+      location: "Mathura",
       testimonial:
         "AEPS is a helpful service by Rizing Pay for customers. They just need to use their finger scan to withdraw cash from their bank account. ​",
-      avatarSrc: "https://in.rapipay.com/wp-content/uploads/2022/12/Divya.png",
+      avatarSrc: customer3.src,
     },
   ];
 

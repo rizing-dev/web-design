@@ -23,18 +23,22 @@ const StyledCard = styled(Card)(({ theme }) => ({
 const StyledMetricBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
+  alignItems: "center", // horizontally center children
+  justifyContent: "center", // vertically center children (if parent allows)
+  textAlign: "center", // center text inside Typography
   position: "relative",
   padding: theme.spacing(3, 4),
   backgroundColor: "#ffffff",
   borderRadius: theme.spacing(2),
   boxShadow: theme.shadows[2],
-  textAlign: "center",
   transition: "all 0.3s ease",
+  height: "100%", // ensures full height usage in Grid item
   "&:hover": {
     transform: "translateY(-5px)",
     boxShadow: theme.shadows[5],
   },
 }));
+
 
 const StyledDivider = styled(Divider)(({ theme }) => ({
   position: "absolute",
@@ -196,6 +200,7 @@ const MapSectionCard = () => {
                 </StyledMetricBox>
               </Grid>
             </Grid>
+
           </CardContent>
         </StyledCard>
       </Container>

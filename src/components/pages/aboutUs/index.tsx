@@ -1,7 +1,7 @@
 import React from "react";
 import TopImage from "./topImage";
 import MidSection from "./midSection";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import VisionMission from "./vissionMission";
 import WelcomeSection from "./welcomeSection";
 import CompanyInfo from "./aboutCompany";
@@ -10,7 +10,9 @@ const AboutUs = () => {
   return (
     <Box>
       <Box>
-        <TopImage />
+        <Container maxWidth="lg">
+          <TopImage />
+        </Container>
       </Box>
       <Box mt={2}>
         <MidSection />

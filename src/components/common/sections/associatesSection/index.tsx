@@ -19,15 +19,9 @@ import yesBankImage from "../../../../../public/banksImages/yesbank.png";
 import airtelBankImage from "../../../../../public/banksImages/Airtel_Payments_Bank.png";
 
 const associations = [
-  { name: "Bank of India", src: boiImage },
-  { name: "Yes Bank", src: yesBankImage },
-  { name: "ICICI Bank", src: iciciImage },
-  { name: "Fino Payments Bank", src: finoImage },
-  { name: "Razorpay", src: razorPayImage },
   { name: "Eko", src: ekoPayImage },
   { name: "AEPS", src: aepsImage },
   { name: "BBPS", src: bbpsImage },
-  { name: "Airtel", src: airtelBankImage },
 ];
 
 const AssociationsSection = () => {
