@@ -9,8 +9,10 @@ import {
   Container,
 } from "@mui/material";
 import microAtmImage from "../../../../../public/improved/mtam improved.png";
+import { useRouter } from "next/router";
 
 const ServiceSectionMicroATM = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -75,6 +77,7 @@ const ServiceSectionMicroATM = () => {
                       backgroundColor: "#004d40", // Darker hover effect
                     },
                   }}
+                  onClick={() => router.push("/services/m-atm")}
                 >
                   Read More
                 </Button>

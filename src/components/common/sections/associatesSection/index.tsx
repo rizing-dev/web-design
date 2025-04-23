@@ -9,14 +9,8 @@ import {
   useTheme,
 } from "@mui/material";
 import aepsImage from "../../../../../public/banksImages/aeps.png";
-import boiImage from "../../../../../public/banksImages/bankofindia.png";
 import bbpsImage from "../../../../../public/banksImages/bbps.png";
-import ekoPayImage from "../../../../../public/banksImages/ekopay.png";
-import finoImage from "../../../../../public/banksImages/finobank.png";
-import iciciImage from "../../../../../public/banksImages/icicibank.png";
-import razorPayImage from "../../../../../public/banksImages/razorpay.png";
-import yesBankImage from "../../../../../public/banksImages/yesbank.png";
-import airtelBankImage from "../../../../../public/banksImages/Airtel_Payments_Bank.png";
+import ekoPayImage from "../../../../../public/banksImages/eko_india_logo.jpeg";
 
 const associations = [
   { name: "Eko", src: ekoPayImage },

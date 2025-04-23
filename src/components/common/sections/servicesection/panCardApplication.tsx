@@ -10,8 +10,10 @@ import {
 } from "@mui/material";
 import panImage1 from "../../../../../public/improved/pan improved.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const ServiceSectionPanCard = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -65,6 +67,7 @@ const ServiceSectionPanCard = () => {
                       backgroundColor: "#004d40", // Darker hover effect
                     },
                   }}
+                  onClick={() => router.push("/services/pan-card")}
                 >
                   Read More
                 </Button>
@@ -74,14 +77,12 @@ const ServiceSectionPanCard = () => {
             {/* Left Side - Image */}
             <Grid item xs={12} md={6}>
               <Image
-                src={
-                  panImage1.src
-                }
+                src={panImage1.src}
                 alt="Fintech illustration"
                 width={400}
                 height={300} // Adjusted height for better proportion
                 style={{ borderRadius: "8px", objectFit: "cover" }} // Rounded corners
-                layout="responsive" // Responsive layout                 
+                layout="responsive" // Responsive layout
               />
             </Grid>
           </Grid>

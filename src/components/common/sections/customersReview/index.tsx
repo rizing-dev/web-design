@@ -156,7 +156,7 @@ const RetailerTestimonials = () => {
       name: "Umesh",
       location: "UP",
       testimonial:
-        "मैं 2 -3 पोर्टल उपयोग करता हूँ। पर Rizing Pay की AEPS सर्विस सबसे आरामदायी है। कमीशन भी अच्छा है, और क्या चाहिए।​",
+        "मैं  2- 3  पोर्टल प्रयोग  करता था पर मुझे Rizing pay  की AEPS सर्विस सबसे आरामदायक लगी और कमीशन भी अच्छा है एक रिटेलर को और क्या चाहिए ",
       avatarSrc:
       customer1.src,
     },
@@ -205,7 +205,7 @@ const RetailerTestimonials = () => {
             fontWeight="bold"
             color="text.primary"
           >
-            Say
+            {'  '}Say
           </Typography>
           <Box
             sx={{

@@ -9,7 +9,9 @@ import {
   Container,
 } from "@mui/material";
 import aepsImage1 from "../../../../../public/newImages/home/aeps1.png";
+import { useRouter } from "next/router";
 const ServiceSectionAadhaarBanking = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -75,6 +77,7 @@ const ServiceSectionAadhaarBanking = () => {
                       backgroundColor: "#004d40", // Darker hover effect
                     },
                   }}
+                  onClick={() => router.push("/services/aeps")}
                 >
                   Read More
                 </Button>

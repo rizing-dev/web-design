@@ -1,6 +1,6 @@
 import { Box, Typography, Grid, Card, CardContent, Container } from "@mui/material";
 import Image from "next/image";
-import finkedaImage from '../../../../../public/finkeda-new.png';
+import finkedaImage from '../../../../../public/images/11.png';
 
 
 const MeetingIllustration = () => {
@@ -34,7 +34,7 @@ const MeetingIllustration = () => {
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Card sx={{ boxShadow: "none", backgroundColor: "transparent" }}>
+          <Card sx={{ boxShadow: "none", backgroundColor: "#f9f9f9" }}>
             <CardContent>
               <img
                 src={finkedaImage.src}

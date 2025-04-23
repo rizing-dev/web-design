@@ -25,27 +25,27 @@ const Footer = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   
   const services = [
-    { name: 'Money Transfer', link: '/services/money-transfer' },
-    { name: 'AEPS', link: '/services/aeps' },
+    { name: 'AePS', link: '/services/aeps' },
+    { name: 'M-ATM', link: '/services/m-atm' },
     { name: 'DMT', link: '/services/dmt' },
-    { name: 'Loans', link: '/services/loans' },
-    { name: 'Business Banking', link: '/services/business-banking' }
+    { name: 'Pan Card', link: '/services/pan-card' },
+    { name: 'Insurance', link: '/services/insurance' },
+    { name: 'Utility Bills', link: '/services/utility-bills' },
+    { name: 'Travel', link: '/services/travel' },
   ];
 
   const company = [
     { name: 'About Us', link: '/about' },
-    { name: 'Leadership', link: '/leadership' },
+    { name: 'Become an Agent', link: '/agent' },
     { name: 'Careers', link: '/careers' },
-    { name: 'News', link: '/news' },
-    { name: 'Contact', link: '/contact' }
   ];
 
   const resources = [
-    { name: 'Help Center', link: '/help' },
-    { name: 'API Documentation', link: '/developers' },
-    { name: 'Partner Program', link: '/partners' },
-    { name: 'Blog', link: '/blog' },
-    { name: 'Security', link: '/security' }
+    { name: 'Help Center', link: '#' },
+    { name: 'API Documentation', link: '#' },
+    { name: 'Partner Program', link: '#' },
+    { name: 'Blog', link: '#' },
+    { name: 'Security', link: '#' }
   ];
 
   const socialIcons = [

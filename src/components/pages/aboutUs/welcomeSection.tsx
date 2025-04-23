@@ -38,7 +38,7 @@ const WelcomeSection = () => {
               letterSpacing: 1,
             }}
           >
-            Ambition: जिद्द आगे बढ़ने की
+            Ambition: जिद्द आगे रहने की
           </Typography>
           <Typography
             variant="body1"

@@ -11,7 +11,9 @@ import {
 import microAtmImage from "../../../../../public/services.png";
 import Image from "next/image";
 import insuranceImage2 from "../../../../../public/newImages/home/bbps2.png";
+import { useRouter } from "next/router";
 const ServiceSectionUtilityBillPayment = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -67,6 +69,7 @@ const ServiceSectionUtilityBillPayment = () => {
                       backgroundColor: "#004d40", // Darker hover effect
                     },
                   }}
+                  onClick={() => router.push("/services/utility-bills")}
                 >
                   Read More
                 </Button>

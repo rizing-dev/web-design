@@ -56,55 +56,55 @@ const FeaturesSection = () => {
     {
       image:
         "https://finkeda.com/wp-content/uploads/2024/09/One-Stop-Digital-Banking-Services.png",
-      title: "One-Stop Digital Banking Services",
+      title: "All-in-One Digital Banking Hub",
       description:
-        "We offer a wide range of digital banking solutions to our customers in small towns through our local merchants.",
+        "We bring a complete suite of digital financial tools to local communities, delivered conveniently through trusted neighborhood merchants.",
     },
     {
       image:
         "https://finkeda.com/wp-content/uploads/2024/09/Safety-Comes-First.png",
-      title: "Safety Comes First",
+      title: "Security Is Our Top Priority",
       description:
-        "Our goal at Rizing Pay is to provide our customers safe, easy and secure digital banking and Fintech solutions.",
+        "At Rizing Pay, we prioritize your financial safety by offering secure, reliable, and user-friendly fintech solutions.",
     },
     {
       image:
         "https://finkeda.com/wp-content/uploads/2024/09/Exceptional-Customer-Support.png",
-      title: "Exceptional Customer Support",
+      title: "Support That Truly Cares",
       description:
-        "Nothing can beat the exceptional customer support of our team, for better experience while assuring that your needs are met.",
+        "Our support team goes the extra mile to ensure you get the help you need—promptly, professionally, and personally.",
     },
     {
       image:
         "https://finkeda.com/wp-content/uploads/2024/09/Seamless-Digital-Banking-Solution-For-All.png",
-      title: "Seamless Digital Banking Solution For All",
+      title: "Smooth Digital Banking for Everyone",
       description:
-        "We revolutionize your payment and bring modern digital banking solutions to rural areas, making financial services accessible.",
+        "We're bridging the gap in rural finance by offering modern, seamless payment solutions that are easy to use and accessible for all.",
     },
-    // New Features added below:
+    // New Features rewritten below:
     {
       image: moneyBag.src,
-      title: "Higher Commission",
+      title: "Earn More With Us",
       description:
-        "We offer competitive commissions to our partners, ensuring that your efforts are well rewarded.",
+        "We reward our partners with attractive commission rates, recognizing the value of your hard work and commitment.",
     },
     {
       image: productTraning.src,
-      title: "Regular Product Training",
+      title: "Ongoing Product Education",
       description:
-        "Our partners receive regular training to stay up-to-date with the latest features and services we offer.",
+        "Stay ahead with our consistent training programs designed to keep you informed about every new service and feature we launch.",
     },
     {
       image: onBoardProduct.src,
-      title: "Easy Onboarding Products",
+      title: "Simple & Fast Product Setup",
       description:
-        "We make onboarding easy and efficient with our simple and intuitive product setup process.",
+        "Our products are built for easy onboarding, enabling you to get started quickly with minimal hassle.",
     },
     {
       image: customerService.src,
-      title: "Dedicated Customer Service Team",
+      title: "Personalized Partner Support",
       description:
-        "Our dedicated customer service team is always available to assist you, ensuring that your experience is smooth and hassle-free.",
+        "Our dedicated service team is always on hand to assist you, ensuring smooth operations and a better experience every step of the way.",
     },
   ];
 

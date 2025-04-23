@@ -219,7 +219,7 @@ export default function CareersPage() {
                 Join Our Fintech Revolution
               </Typography>
               <Typography variant="h5" paragraph>
-                Help us transform B2B payment solutions across India
+                Help us transform B2B payment solutions across BHARAT
               </Typography>
             </Grid>
             <Grid

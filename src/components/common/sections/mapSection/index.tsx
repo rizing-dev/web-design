@@ -116,7 +116,7 @@ const MapSectionCard = () => {
                       fontSize: "2rem",
                     }}
                   >
-                    15
+                    5
                     <Typography
                       variant="h5"
                       component="span"
@@ -143,7 +143,7 @@ const MapSectionCard = () => {
                       fontSize: "2rem",
                     }}
                   >
-                    50
+                    20
                     <Typography
                       variant="h5"
                       component="span"
@@ -165,7 +165,7 @@ const MapSectionCard = () => {
                     component="div"
                     sx={{ fontWeight: "bold", fontSize: "2rem" }}
                   >
-                    20,000
+                    10,000
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     PIN Codes Covered
@@ -185,7 +185,7 @@ const MapSectionCard = () => {
                       fontSize: "2rem",
                     }}
                   >
-                    20
+                    10
                     <Typography
                       variant="h5"
                       component="span"
