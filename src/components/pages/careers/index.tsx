@@ -160,7 +160,6 @@ export default function CareersPage() {
   const departmentTabs = [
     "All",
     "Engineering",
-    // "Product",
     "Design",
     "Sales",
     "Marketing",
@@ -200,7 +199,7 @@ export default function CareersPage() {
       {/* Hero Section */}
       <Box
         sx={{
-          bgcolor: "primary.main",
+          background: `linear-gradient(135deg, #001F3F, #4B0082)`,
           color: "white",
           py: 8,
           position: "relative",

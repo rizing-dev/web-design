@@ -97,6 +97,7 @@ const RetailerTestimonial = ({
               display: "flex",
               alignItems: "center",
               gap: 0.5,
+              mb: -3,
             }}
           >
             <LocationOnIcon fontSize="small" />
@@ -233,6 +234,7 @@ const RetailerTestimonials = () => {
                   to: { opacity: 1, transform: "translateY(0)" },
                 },
               }}
+
             >
               <RetailerTestimonial {...testimonial} />
             </Grid>
