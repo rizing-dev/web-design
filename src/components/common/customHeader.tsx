@@ -125,19 +125,14 @@ const serviceItems: ServiceItem[] = [
 // Styled components
 const StyledAppBar = styled(AppBar)<StyledAppBarProps>(
   ({ theme, scrolled }) => ({
-    background: scrolled
-      ? theme.palette.background.paper // Solid background when scrolled
-      : `linear-gradient(90deg, ${alpha(
-          theme.palette.primary.light,
-          0.2
-        )} 0%, ${alpha(theme.palette.primary.light, 0.4)} 100%)`, // Transparent gradient when at top
-    boxShadow: scrolled ? theme.shadows[4] : "none", // Only show shadow when scrolled
-    transition: "background 0.3s ease, box-shadow 0.3s ease", // Smooth transition
+    background: "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
+    boxShadow: scrolled ? theme.shadows[4] : "none",
+    transition: "background 0.3s ease, box-shadow 0.3s ease",
   })
 );
 
 const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
-  color: theme.palette.primary.main,
+  color: "white",
   fontWeight: 500,
   fontSize: "1rem",
   marginLeft: theme.spacing(2),
@@ -193,6 +188,7 @@ const ServiceText = styled(Typography)<ServiceTextProps>(
     fontWeight: 500,
     textAlign: "center",
     color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
+    // color: "white",
     transition: "color 0.3s ease-in-out",
     className: "service-text",
   })
@@ -395,7 +391,7 @@ const CustomHeader = () => {
                 sx={{
                   ml: 2,
                   fontWeight: 700,
-                  color: "primary.main",
+                  color: "whitesmoke",
                   display: { xs: "none", sm: "block" }, // Hide text on extra small screens
                 }}
               >
@@ -434,8 +430,8 @@ const CustomHeader = () => {
                       }
                     >
                       {/* {item.label} */}
-                      <Typography textTransform={'none'}>
-                      {item.label}
+                      <Typography textTransform={"none"} color="white">
+                        {item.label}
                       </Typography>
                       {/* {formatLabel(item.label)} */}
                     </NavButton>
@@ -477,7 +473,7 @@ const CustomHeader = () => {
                         sx={{
                           display: "block",
                           textAlign: "center",
-                          color: "grey.600",
+                          color: "white",
                           backgroundColor: "#f0f0f0",
                           padding: "8px 16px",
                           borderRadius: "8px",
@@ -663,7 +659,7 @@ const CustomHeader = () => {
                     }}
                     sx={{ color: "primary.main" }}
                   >
-                    <Typography textAlign="center" textTransform={'none'}>
+                    <Typography textAlign="center" textTransform={"none"}>
                       {formatLabel(item.label)}
                     </Typography>
                   </MenuItem>

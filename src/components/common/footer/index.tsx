@@ -58,7 +58,10 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        background: `linear-gradient(135deg, #001F3F, #4B0082)`,
+        background: `linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)`,
+        // background: `linear-gradient(135deg, #001F3F, #4B0082)`,
+        // background: `linear-gradient(135deg, #0B1E3F, #1A75CF)`,
+
         color: "#fff", // Light text color for contrast
         pt: 6,
         pb: 3,

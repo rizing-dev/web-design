@@ -11,8 +11,8 @@ const TopImage = () => {
         src={aboutusImage.src}
         alt="slide-0"
         style={{
-          width: "100%", // Ensure full width within the container
-          height: "450px", // Adjust height to your preference
+          // width: "100%", // Ensure full width within the container
+          // height: "450px", // Adjust height to your preference
           objectFit: "cover", // Ensures the image covers the full space
           borderRadius: "10px",
         }}

@@ -10,7 +10,7 @@ import image1 from "../../../../../public/newImages/bbps1.jpg";
 import image2 from "../../../../../public/newImages/dm1.jpg";
 import image3 from "../../../../../public/newImages/pancard1.jpg";
 import image4 from "../../../../../public/newImages/travel1.jpg";
-import image5 from "../../../../../public/newImages/matm1.jpg";
+import image5 from "../../../../../public/customers image/matm banner improved (1).png";
 import image6 from "../../../../../public/newImages/Insurance final (1).png";
 import image7 from "../../../../../public/newImages/pancard1.jpg";
 

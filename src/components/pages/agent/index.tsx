@@ -683,8 +683,9 @@ const BecomeAnAgent = () => {
                   p: 4,
                   borderRadius: 2,
                   textAlign: "center",
-                  background:
-                    "linear-gradient(135deg, #f5f7fa 0%, #e4e8ef 100%)",
+                  // background:
+                  //   "linear-gradient(135deg, #f5f7fa 0%, #e4e8ef 100%)",
+                  background: "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
                 }}
               >
                 <Box
@@ -697,7 +698,8 @@ const BecomeAnAgent = () => {
                 >
                   <Box
                     sx={{
-                      bgcolor: "primary.main",
+                      // bgcolor: ",
+                      background: `linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)`,
                       color: "white",
                       width: 60,
                       height: 60,
@@ -708,19 +710,19 @@ const BecomeAnAgent = () => {
                       mr: 2,
                     }}
                   >
-                    <Typography variant="h6" fontWeight="bold">
+                    <Typography variant="h6" fontWeight="bold" color="white">
                       ₹
                     </Typography>
                   </Box>
                   <Typography
                     variant="h5"
                     fontWeight="bold"
-                    color="primary.main"
+                    color="white"
                   >
                     Earn Extra ₹40,000 to ₹60,000 per month
                   </Typography>
                 </Box>
-                <Typography variant="body1" mb={2}>
+                <Typography variant="body1" mb={2} color="white">
                   With just 5-7 retailers in your network you can easily add an
                   extra ₹40000 to ₹ 60000 income per month. Onboard more
                   retailers to earn more.
@@ -746,7 +748,8 @@ const BecomeAnAgent = () => {
         <Paper
           elevation={0}
           sx={{
-            bgcolor: "primary.main",
+            // bgcolor: "",
+            background: `linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)`,
             p: 6,
             mt: 6,
             borderRadius: 3,
