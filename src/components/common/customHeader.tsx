@@ -140,7 +140,7 @@ const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
   position: "relative",
   "&:hover": {
     backgroundColor: "transparent",
-    color: 'white',
+    color: "white",
   },
   "&::after": {
     content: '""',
@@ -149,7 +149,7 @@ const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
     left: 0,
     width: active ? "100%" : "0%",
     height: "2px",
-    backgroundColor: 'black',
+    backgroundColor: "black",
     transition: "width 0.3s ease-in-out",
   },
   "&:hover::after": {
@@ -187,8 +187,7 @@ const ServiceText = styled(Typography)<ServiceTextProps>(
     fontSize: "0.875rem",
     fontWeight: 500,
     textAlign: "center",
-    // color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
-    color: "white",
+    color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
     transition: "color 0.3s ease-in-out",
     className: "service-text",
   })
@@ -394,7 +393,6 @@ const CustomHeader = () => {
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
-                
               }}
             >
               {navItems.map((item) =>
@@ -439,13 +437,9 @@ const CustomHeader = () => {
                           mt: 6.4,
                           borderRadius: 2,
                           boxShadow: 8,
-                          backgroundColor:
-                            "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
-                          // jitendra
                           backdropFilter: "blur(8px)",
-                          background: 'linear-gradient(135deg, #5C7CA6, #9370DB, #B9A9F5)'
+                          color: "white",
                         },
-
                       }}
                       PaperProps={{
                         elevation: 8,
@@ -461,23 +455,46 @@ const CustomHeader = () => {
                         vertical: "top",
                         horizontal: "center",
                       }}
-                      
-                      
                     >
-                      <Typography
+                      {/* <Typography
                         variant="overline"
                         sx={{
                           display: "block",
                           textAlign: "center",
-                          color: "white",
                           padding: "8px 16px",
                           borderRadius: "8px",
                           fontWeight: "bold",
                           boxShadow: 3,
+                          backgroundImage:
+                            "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          fontSize: "1rem",
                         }}
                       >
                         Our Services
-                      </Typography>
+                      </Typography> */}
+                      <Box
+                        sx={{
+                          backgroundImage:
+                            "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
+                          borderRadius: "8px",
+                          padding: "8px 16px",
+                          textAlign: "center",
+                          boxShadow: 3,
+                          mb: 1, // optional margin bottom
+                        }}
+                      >
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          Our Services
+                        </Typography>
+                      </Box>
 
                       <Grid container spacing={1} justifyContent="center">
                         {serviceItems.map((service: any) => (
@@ -558,6 +575,7 @@ const CustomHeader = () => {
                 "& .MuiPaper-root": {
                   width: "80%",
                   maxWidth: 300,
+                  bgcolor: "linear-gradient(135deg, #5C7CA6, #9370DB, #B9A9F5)",
                 },
               }}
             >
@@ -591,7 +609,10 @@ const CustomHeader = () => {
                   <Box key={item.id}>
                     <MenuItem
                       onClick={toggleMobileServices}
-                      sx={{ color: "primary.main" }}
+                      sx={{
+                        color:
+                          "linear-gradient(135deg, #5C7CA6, #9370DB, #B9A9F5)",
+                      }}
                     >
                       <Typography>{item.label}</Typography>
                       <Box sx={{ flexGrow: 1 }} />
@@ -652,7 +673,10 @@ const CustomHeader = () => {
                       router.push(item.path);
                       handleMobileMenuClose();
                     }}
-                    sx={{ color: "primary.main" }}
+                    sx={{
+                      color:
+                        "linear-gradient(135deg, #5C7CA6, #9370DB, #B9A9F5)",
+                    }}
                   >
                     <Typography textAlign="center" textTransform={"none"}>
                       {formatLabel(item.label)}
