@@ -140,7 +140,7 @@ const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
   position: "relative",
   "&:hover": {
     backgroundColor: "transparent",
-    color: theme.palette.primary.dark,
+    color: 'white',
   },
   "&::after": {
     content: '""',
@@ -149,7 +149,7 @@ const NavButton = styled(Button)<{ active: number }>(({ theme, active }) => ({
     left: 0,
     width: active ? "100%" : "0%",
     height: "2px",
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: 'black',
     transition: "width 0.3s ease-in-out",
   },
   "&:hover::after": {
@@ -187,8 +187,8 @@ const ServiceText = styled(Typography)<ServiceTextProps>(
     fontSize: "0.875rem",
     fontWeight: 500,
     textAlign: "center",
-    color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
-    // color: "white",
+    // color: isHovered ? theme.palette.primary.main : theme.palette.text.primary,
+    color: "white",
     transition: "color 0.3s ease-in-out",
     className: "service-text",
   })
@@ -386,17 +386,6 @@ const CustomHeader = () => {
                 alt="Rizing Pay Logo"
                 style={{ height: "40px", width: "auto" }}
               />
-              <Typography
-                variant="h6"
-                sx={{
-                  ml: 2,
-                  fontWeight: 700,
-                  color: "whitesmoke",
-                  display: { xs: "none", sm: "block" }, // Hide text on extra small screens
-                }}
-              >
-                Rizing Pay
-              </Typography>
             </Box>
 
             {/* Desktop Navigation */}
@@ -405,6 +394,7 @@ const CustomHeader = () => {
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
+                
               }}
             >
               {navItems.map((item) =>
@@ -449,9 +439,13 @@ const CustomHeader = () => {
                           mt: 6.4,
                           borderRadius: 2,
                           boxShadow: 8,
-                          bgcolor: "rgba(245, 250, 255, 0.97)",
+                          backgroundColor:
+                            "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
+                          // jitendra
                           backdropFilter: "blur(8px)",
+                          background: 'linear-gradient(135deg, #5C7CA6, #9370DB, #B9A9F5)'
                         },
+
                       }}
                       PaperProps={{
                         elevation: 8,
@@ -467,6 +461,8 @@ const CustomHeader = () => {
                         vertical: "top",
                         horizontal: "center",
                       }}
+                      
+                      
                     >
                       <Typography
                         variant="overline"
@@ -474,7 +470,6 @@ const CustomHeader = () => {
                           display: "block",
                           textAlign: "center",
                           color: "white",
-                          backgroundColor: "#f0f0f0",
                           padding: "8px 16px",
                           borderRadius: "8px",
                           fontWeight: "bold",

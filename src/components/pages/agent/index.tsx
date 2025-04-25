@@ -31,7 +31,7 @@ import LaptopIcon from "@mui/icons-material/Laptop";
 import PersonIcon from "@mui/icons-material/Person";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AppsIcon from "@mui/icons-material/Apps";
-import partnerImg from "../../../../public/images/partnership-benefits.png";
+import partnerImg from "../../../../public/customers image/Become an agent.svg";
 
 const BecomeAnAgent = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -685,7 +685,8 @@ const BecomeAnAgent = () => {
                   textAlign: "center",
                   // background:
                   //   "linear-gradient(135deg, #f5f7fa 0%, #e4e8ef 100%)",
-                  background: "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
+                  background:
+                    "linear-gradient(135deg, #001F3F, #4B0082, #8A2BE2)",
                 }}
               >
                 <Box
@@ -714,11 +715,7 @@ const BecomeAnAgent = () => {
                       ₹
                     </Typography>
                   </Box>
-                  <Typography
-                    variant="h5"
-                    fontWeight="bold"
-                    color="white"
-                  >
+                  <Typography variant="h5" fontWeight="bold" color="white">
                     Earn Extra ₹40,000 to ₹60,000 per month
                   </Typography>
                 </Box>
