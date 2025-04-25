@@ -31,6 +31,8 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import BoltIcon from "@mui/icons-material/Bolt";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { useRouter } from "next/router";
+// import Logo from "../../../public/customers image/Rizing Pay (1).svg";
+import logo1 from "../../../public/customers image/Rizing Pay (4).svg";
 
 // Type definitions
 interface NavItem {
@@ -381,9 +383,10 @@ const CustomHeader = () => {
               }}
             >
               <img
-                src="https://bc.rizingpay.com//assets/logo.png"
+                src={logo1.src}
                 alt="Rizing Pay Logo"
-                style={{ height: "40px", width: "auto" }}
+                // style={{ height: "80px", width: "auto" }}
+                style={{ height: "70px", width: "100px" }} // Adjust these values as needed
               />
             </Box>
 

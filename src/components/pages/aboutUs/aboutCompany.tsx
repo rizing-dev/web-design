@@ -7,7 +7,7 @@ import {
   Container,
 } from "@mui/material";
 import Image from "next/image";
-import businessImage from "../../../../public/images/aboutus123.jpg";
+import businessImage from "../../../../public/customers image/10.svg";
 
 const CompanyInfo = () => {
   return (
@@ -57,7 +57,7 @@ const CompanyInfo = () => {
           {/* Right Side: Image */}
           <Grid item xs={12} md={5}>
             <Image
-              src={businessImage}
+              src={businessImage.src}
               alt="Rizing Pay Business"
               width={400}
               height={100}

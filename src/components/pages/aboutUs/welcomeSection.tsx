@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import peopleImage from "../../../../public/customers image/about men.png";
+import peopleImage from "../../../../public/customers image/about men final.png";
+
 
 const WelcomeSection = () => {
   return (
