@@ -249,7 +249,6 @@ const LoginChip = styled(Chip)(({ theme }) => ({
 
 const CustomHeader = () => {
   const router = useRouter();
-  console.log("🚀 ~ CustomHeader ~ router:", router);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [activeItem, setActiveItem] = useState<number>(1);
   const [hoveredServiceItem, setHoveredServiceItem] = useState<number | null>(
@@ -342,7 +341,6 @@ const CustomHeader = () => {
 
   // Handle login button click
   const handleLoginClick = () => {
-    console.log("Login clicked");
     // Open the URL in a new tab
     window.open("https://bc.rizingpay.com/users_login", "_blank");
   };

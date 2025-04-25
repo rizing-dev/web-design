@@ -3,8 +3,6 @@ import { parse } from 'url'
 import next from 'next'
  
 const port = parseInt(process.env.PORT || '3000', 10)
-console.log("🚀 ~ port:", port)
-
 
 
 const dev = process.env.NODE_ENV !== 'production'
