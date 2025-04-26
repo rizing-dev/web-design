@@ -1,5 +1,5 @@
-# .htaccess file for proxying to Node.js
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
     RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
 </IfModule>
