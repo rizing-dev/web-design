@@ -1,15 +1,5 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    
-    # Proxy requests to the Node.js server on port 3000
-    RewriteCond %{REQUEST_URI} !^/favicon.ico$  # Ignore favicon.ico requests if necessary
     RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
-</IfModule>
-
-# Ensure Apache is using mod_proxy for HTTP requests
-<IfModule mod_proxy.c>
-    ProxyRequests Off
-    ProxyPass / http://localhost:3000/
-    ProxyPassReverse / http://localhost:3000/
 </IfModule>
