@@ -49,11 +49,11 @@ const Footer = () => {
   ];
 
   const socialIcons = [
-    { icon: <FacebookIcon />, link: "https://facebook.com" },
-    { icon: <TwitterIcon />, link: "https://twitter.com" },
-    { icon: <LinkedInIcon />, link: "https://linkedin.com" },
-    { icon: <InstagramIcon />, link: "https://instagram.com" },
+    { icon: <TwitterIcon />, link: "https://x.com/pay_rizing?t=OIB2qU-hFiTjNHhqvvlZtg&s=09" },
+    { icon: <LinkedInIcon />, link: "https://www.linkedin.com/in/rizing-pay-66747934a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { icon: <InstagramIcon />, link: "https://www.instagram.com/rizing_pay?igsh=d245NWF5NGJrMWxh" },
   ];
+  
 
   return (
     <Box
