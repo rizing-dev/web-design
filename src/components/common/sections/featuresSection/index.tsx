@@ -11,6 +11,10 @@ import moneyBag from "../../../../../public/improved/money bag improved.svg";
 import customerService from "../../../../../public/improved/Dedicated Customer Service Team.svg";
 import productTraning from "../../../../../public/improved/Regular Product Training.svg";
 import onBoardProduct from "../../../../../public/improved/Easy Onboarding Products.svg";
+import card1 from "../../../../../public/improved/card1.png";
+import card2 from "../../../../../public/improved/card2.png";
+import card3 from "../../../../../public/improved/card3.png";
+import card4 from "../../../../../public/improved/card4.png";
 
 interface Props {
   image: string;
@@ -54,29 +58,25 @@ const FeatureCard = ({ image, title, description }: Props) => {
 const FeaturesSection = () => {
   const features = [
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/One-Stop-Digital-Banking-Services.png",
+      image: card1.src,
       title: "All-in-One Digital Banking Hub",
       description:
         "We bring a complete suite of digital financial tools to local communities, delivered conveniently through trusted neighborhood merchants.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Safety-Comes-First.png",
+      image: card2.src,
       title: "Security Is Our Top Priority",
       description:
         "At Rizing Pay, we prioritize your financial safety by offering secure, reliable, and user-friendly fintech solutions.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Exceptional-Customer-Support.png",
+      image: card3.src,
       title: "Support That Truly Cares",
       description:
         "Our support team goes the extra mile to ensure you get the help you need—promptly, professionally, and personally.",
     },
     {
-      image:
-        "https://finkeda.com/wp-content/uploads/2024/09/Seamless-Digital-Banking-Solution-For-All.png",
+      image: card4.src,
       title: "Smooth Digital Banking for Everyone",
       description:
         "We're bridging the gap in rural finance by offering modern, seamless payment solutions that are easy to use and accessible for all.",
