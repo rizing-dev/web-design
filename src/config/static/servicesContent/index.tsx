@@ -1,5 +1,3 @@
-
-import travelImg from "../../../../public/servicesImg/Travel-Services-copy.jpg";
 import {
   AttachMoney,
   People,
@@ -384,71 +382,7 @@ const servicesContent = {
 
     benefitsTitle: "",
   },
-  pg: {
-    images: [
-      "https://finkeda.com/wp-content/uploads/2024/12/insurance-page-banner-copy.jpg",
-    ],
-    services: [
-      {
-        title: "Seamless Payment Solutions for Every Business",
-        subtitle: "Unlock Easy, Secure, and Scalable Payments with Rizing Pay",
-        description: `With Rizing Pay, businesses can accept a wide array of payment methods, including domestic and international credit & debit cards, EMIs (Credit/Debit Cards & Cardless), PayLater, Netbanking from 58 banks, UPI, and 8 mobile wallets. Our robust platform makes it easy to accept payments from anywhere in the world while ensuring a smooth and secure checkout experience for your customers.`,
-        image: travelImg.src, // Replace with appropriate image source
-        reverse: false,
-      },
-      {
-        title: "Global Payment Acceptance, Local Convenience",
-        subtitle: "Integrate Rizing Pay's Payment Gateway with Ease",
-        description: `Rizing Pay makes integrating payment solutions simple with a developer-friendly approach. Whether you're using APIs, plugins, or libraries, our platform supports all major languages and platforms. Accept payments seamlessly from your customers worldwide with the same ease as you would locally.`,
-        image: travelImg.src, // Replace with appropriate image source
-        reverse: true,
-      },
-      {
-        title: "Advanced Analytics for Better Business Decisions",
-        subtitle: "Gain Insight with Rizing Pay’s Powerful Dashboard",
-        description: `Rizing Pay offers a comprehensive, easy-to-use dashboard that gives you access to detailed statistics on payments, settlements, refunds, and more. This data-driven approach allows you to make more informed business decisions, enhance your operational efficiency, and grow your revenue.`,
-        image: travelImg.src, // Replace with appropriate image source
-        reverse: false,
-      },
-      {
-        title: "Secure, Reliable, and Scalable Payment Infrastructure",
-        subtitle: "Trust Rizing Pay’s Robust Security for Peace of Mind",
-        description: `We take security seriously. Rizing Pay is PCI DSS Level 1 compliant and undergoes frequent third-party audits to ensure your data is always safe. With dedicated internal security teams and advanced fraud protection measures, you can trust us to handle your payments securely, leaving you free to focus on growing your business.`,
-        image: travelImg.src, // Replace with appropriate image source
-        reverse: true,
-      },
-    ],
-
-    benefitsData: [
-      {
-        icon: <AttachMoney fontSize="large" />,
-        text: "Earn attractive commissions on every payment processed through Rizing Pay, with competitive transaction fees and incentives for high-volume businesses.",
-      },
-      {
-        icon: <People fontSize="large" />,
-        text: "Empower customers by offering them a wide range of payment options, including credit/debit cards, UPI, mobile wallets, and more, ensuring a seamless checkout experience.",
-      },
-      {
-        icon: <AccessTime fontSize="large" />,
-        text: "24/7 access to the Rizing Pay dashboard, enabling you to track payments, settlements, refunds, and more, ensuring real-time visibility of your financial transactions.",
-      },
-      {
-        icon: <LegendToggleIcon fontSize="large" />,
-        text: "Increase your customer base by offering secure and scalable payment solutions, allowing you to accept payments globally while offering a local feel.",
-      },
-      {
-        icon: <School fontSize="large" />,
-        text: "Access regular, professional training and support to help you effectively use Rizing Pay’s tools, APIs, and integrations for a smooth payment experience.",
-      },
-      {
-        icon: <RocketLaunch fontSize="large" />,
-        text: "Boost your business growth with Rizing Pay’s robust, developer-friendly platform and a range of payment methods that help drive more conversions and revenue.",
-      },
-    ],
-
-    benefitsTitle:
-      "Why Rizing Pay is the Perfect Payment Solution for Your Business – Unlock the Benefits of Seamless Payment Processing with",
-  },
+  
   utilityBills: {
     images: [bbpsImage1.src, bbpsImage2.src, bbpsImage3.src],
     services: [
