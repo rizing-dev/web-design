@@ -5,22 +5,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   devIndicators: false,
   
-  webpack(config, { dev, isServer }) {
-    // Completely disable caching
+  // Try static export
+  output: 'export',
+  
+  webpack(config) {
     config.cache = false;
-    
-    // Resolve @ alias
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
-    
-    // Disable snapshot optimization that's causing issues
-    if (config.snapshot) {
-      config.snapshot = {
-        ...config.snapshot,
-        managedPaths: [],
-        immutablePaths: [],
-      };
-    }
-    
     return config;
   },
 };
