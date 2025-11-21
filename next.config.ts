@@ -4,14 +4,23 @@ import path from "path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   devIndicators: false,
-  webpack(config) {
+  
+  webpack(config, { dev, isServer }) {
+    // Completely disable caching
+    config.cache = false;
+    
+    // Resolve @ alias
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     
-    // Disable caching to fix server build issues
-    if (!config.cache) {
-      config.cache = false;
+    // Disable snapshot optimization that's causing issues
+    if (config.snapshot) {
+      config.snapshot = {
+        ...config.snapshot,
+        managedPaths: [],
+        immutablePaths: [],
+      };
     }
-
+    
     return config;
   },
 };
